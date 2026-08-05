@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; padding-bottom: 44px; }
+  a { color: #A71F38; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #A71F38; outline-offset: 1px; }
+  @media (hover: hover) and (pointer: fine) {
+    a:hover { color: #841729; }
+    .navlink:hover .dropdown { display: block !important; }
+  }
+  .ds-section { margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(26,44,78,0.2); }
+  .ds-section:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+  .ds-section h3 { font-size: 1rem; font-weight: 700; color: #1A2C4E; margin-bottom: 10px; }
+  .ds-section p { font-size: 0.95rem; line-height: 1.75; color: #1A2C4E; margin-bottom: 10px; text-align: justify; }
+  .ds-section ul { font-size: 0.95rem; line-height: 1.75; color: #1A2C4E; padding-left: 1.1em; margin-bottom: 10px; text-align: justify; }
+  .ds-section ul li { margin-bottom: 6px; }
+</style>
+</helmet>
+<div style="color:#1A2C4E; line-height:1.7; background:#FFFFFF; display:{{ pageWrapDisplay }}; flex-direction:column; min-height:{{ pageWrapMinHeight }};">
+
+  <header style="position:sticky; top:0; background:#D3D8DE; z-index:100; box-shadow:0 3px 7px rgba(0,0,0,0.14);">
+    <div style="background:#D3D8DE; padding:{{ headerPad }};">
+      <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:{{ headerGridCols }}; grid-template-rows:auto auto; align-items:end; column-gap:{{ lockupGap }}; row-gap:0px;">
+        <img src="assets/AK-AK-Logo.png" alt="AK-AK Logo" style="height:{{ logoSize }}; width:auto; grid-row:1/3; grid-column:1; align-self:center;" />
+        <a href="index.html" style="grid-row:1; grid-column:2; line-height:1; font-family:Arial,Helvetica,sans-serif; font-weight:600; color:#A71F38; letter-spacing:0.02em; white-space:nowrap;">
+          <span style="font-size:{{ nameSize1 }};">A</span><span style="font-size:{{ nameSize2 }};">NWALTS</span><span style="font-size:{{ nameSize1 }};">K</span><span style="font-size:{{ nameSize2 }};">ANZLEI </span><span style="font-size:{{ nameSize1 }};">A</span><span style="font-size:{{ nameSize2 }};">NDREA&nbsp;</span><span style="font-size:{{ nameSize1 }};">K</span><span style="font-size:{{ nameSize2 }};">NEBEL</span>
+        </a>
+        <div style="grid-row:1; grid-column:3; text-align:right; line-height:1; font-family:Arial,Helvetica,sans-serif; font-size:{{ subtitleSize }}; font-weight:700; color:#A71F38; letter-spacing:0.01em;">Rechtsanw&auml;ltin</div>
+        <div style="grid-row:2; grid-column:2; margin-top:-4px; display:flex; justify-content:space-between; align-items:baseline; gap:8px; font-family:Arial,Helvetica,sans-serif; font-size:{{ subtitleSize }}; font-weight:700; color:#A71F38; letter-spacing:0.01em;">
+          <span>Kanzlei f&uuml;r Arbeits- und Sozialrecht</span>
+          <span style="flex:1; display:flex; justify-content:center;"><span style="color:#A71F38; opacity:0.4; font-weight:400;">|</span></span>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Zehntwiesenstr.+5+76275+Ettlingen" target="_blank" rel="noopener" style="color:#A71F38; font-weight:600; white-space:nowrap;" style-hover="text-decoration:underline;">76275 Ettlingen</a>
+        </div>
+        <div style="grid-row:2; grid-column:3; margin-top:-4px; text-align:right; font-family:Arial,Helvetica,sans-serif; font-size:{{ subtitleSize }}; font-weight:700; color:#A71F38; letter-spacing:0.01em;">Fachanw&auml;ltin f&uuml;r: Arbeitsrecht &middot; Sozialrecht</div>
+      </div>
+    </div>
+
+    <sc-if value="{{ isNotMobile }}" hint-placeholder-val="{{ true }}">
+    <div style="background:#D3D8DE; border-top:2px solid rgba(167,31,56,0.35);">
+      <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:flex; justify-content:center;">
+        <ul style="display:flex; gap:8px; list-style:none; font-size:1.02rem; align-items:stretch;">
+          <li style="display:flex;"><a href="index.html" aria-label="Startseite" style="display:flex; align-items:center; padding:6px 16px; color:#1A2C4E;" style-hover="background:#1A2C4E;color:#FFFFFF;"><i class="ti ti-home" style="font-size:20px;"></i></a></li>
+          <li style="display:flex;"><a href="kanzlei.html" style="display:flex; align-items:center; padding:6px 16px; color:#1A2C4E; font-weight:400;" style-hover="background:#1A2C4E;color:#FFFFFF;">Kanzlei</a></li>
+          <li class="navlink" style="position:relative; display:flex;">
+            <a href="leistungen.html" style="display:flex; align-items:center; gap:5px; white-space:nowrap; padding:6px 16px; color:#1A2C4E; font-weight:400; align-self:stretch;" style-hover="background:#1A2C4E;color:#FFFFFF;">Leistungen <span style="font-size:10px;">&#9662;</span></a>
+            <div class="dropdown" style="display:none; position:absolute; top:100%; left:0; background:#FFFFFF; box-shadow:0 4px 12px rgba(0,0,0,0.12); min-width:220px; z-index:200;">
+              <a href="leistungen-arbeitsrecht.html" style="display:block; padding:11px 18px; border-bottom:1px solid rgba(26,44,78,0.1); color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Arbeitsrecht</a>
+              <a href="leistungen-sozialrecht.html" style="display:block; padding:11px 18px; border-bottom:1px solid rgba(26,44,78,0.1); color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Sozialrecht</a>
+              <a href="leistungen-vorsorgeplanung.html" style="display:block; padding:11px 18px; color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Vorsorgeplanung</a>
+            </div>
+          </li>
+          <li style="display:flex;"><a href="vita.html" style="display:flex; align-items:center; padding:6px 16px; color:#1A2C4E; font-weight:400;" style-hover="background:#1A2C4E;color:#FFFFFF;">Vita</a></li>
+          <li class="navlink" style="position:relative; display:flex;">
+            <a href="fachanwalt.html" style="display:flex; align-items:center; gap:5px; white-space:nowrap; padding:6px 16px; color:#1A2C4E; font-weight:400; align-self:stretch;" style-hover="background:#1A2C4E;color:#FFFFFF;">Fachanwalt <span style="font-size:10px;">&#9662;</span></a>
+            <div class="dropdown" style="display:none; position:absolute; top:100%; left:0; background:#FFFFFF; box-shadow:0 4px 12px rgba(0,0,0,0.12); min-width:260px; z-index:200;">
+              <a href="fortbildungen-arbeitsrecht.html" style="display:block; padding:11px 18px; border-bottom:1px solid rgba(26,44,78,0.1); color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Fortbildungen Arbeitsrecht</a>
+              <a href="fortbildungen-sozialrecht.html" style="display:block; padding:11px 18px; color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Fortbildungen Sozialrecht</a>
+            </div>
+          </li>
+          <li style="display:flex;"><a href="kosten.html" style="display:flex; align-items:center; padding:6px 16px; color:#1A2C4E; font-weight:400;" style-hover="background:#1A2C4E;color:#FFFFFF;">Kosten</a></li>
+          <li style="display:flex;"><a href="kontakt.html" style="display:flex; align-items:center; padding:6px 16px; margin-left:4px; color:#A71F38; font-weight:600; border:1px solid #A71F38; border-radius:3px;" style-hover="background:#A71F38;color:#FFFFFF;">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <div style="background:#D3D8DE; border-top:2px solid #A71F38; border-bottom:2px solid #A71F38; display:flex; align-items:center; justify-content:space-between; padding:0 20px;">
+      <span style="color:#1A2C4E; font-weight:700; font-size:14px;">Men&uuml;</span>
+      <button type="button" onClick="{{ toggleMenu }}" aria-label="Men&uuml; &ouml;ffnen" style="background:none; border:none; padding:16px 4px; cursor:pointer; display:flex; align-items:center;">
+        <i class="ti ti-menu-2" style="font-size:26px; color:#1A2C4E;"></i>
+      </button>
+    </div>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="background:#FFFFFF; border-bottom:2px solid #A71F38;">
+        <ul style="list-style:none; font-size:0.95rem;">
+          <li><a href="index.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700;">Startseite</a></li>
+          <li><a href="kanzlei.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Kanzlei</a></li>
+          <li><a href="leistungen.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Leistungen</a></li>
+          <li><a href="vita.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Vita</a></li>
+          <li><a href="fachanwalt.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Fachanwalt</a></li>
+          <li><a href="kosten.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Kosten</a></li>
+          <li><a href="kontakt.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Kontakt</a></li>
+        </ul>
+      </div>
+    </sc-if>
+    </sc-if>
+  </header>
+
+  <main style="flex:{{ mainFlex }};">
+    <h1 style="position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); border:0;">Datenschutzerkl&auml;rung der Anwaltskanzlei Andrea Knebel Ettlingen</h1>
+
+    <section style="padding:56px 0 60px;">
+      <div style="max-width:1140px; margin:0 auto; padding:0 24px;">
+        <div style="max-width:65ch;">
+          <p style="font-size:0.82rem; letter-spacing:0.18em; text-transform:uppercase; color:#A71F38; font-weight:700; margin-bottom:14px; display:flex; align-items:center; gap:12px;"><span style="width:3px; height:18px; background:#1A2C4E; display:inline-block;"></span>Datenschutz</p>
+          <h2 style="font-size:1.9rem; line-height:1.4; margin-bottom:28px;">
+            <span style="font-weight:700; color:#1A2C4E;">Datenschutzinformation der</span><br />
+            <span style="font-weight:700; color:#A71F38;">Anwaltskanzlei Andrea Knebel</span>
+          </h2>
+
+          <div class="ds-section">
+            <h3>Name und Kontaktdaten der f&uuml;r die Datenverarbeitung Verantwortlichen</h3>
+            <p>Diese Datenschutzerkl&auml;rung gilt f&uuml;r die Datenverarbeitung durch die Datenschutzverantwortliche:</p>
+            <p style="text-align:left;">Rechtsanw&auml;ltin Andrea Knebel<br />Zehntwiesenstra&szlig;e 5, D-76275 Ettlingen<br />
+            <i class="ti ti-phone" style="font-size:16px; color:#A71F38; vertical-align:-2px;" aria-hidden="true"></i> <a href="tel:+4972437655590" style="color:#1A2C4E;">+&nbsp;49&nbsp;&nbsp;72 43 / 76 555 90</a><br />
+            <i class="ti ti-printer" style="font-size:16px; color:#A71F38; vertical-align:-2px;" aria-hidden="true"></i> + 49&nbsp;&nbsp;72 43 / 76 555 89<br />
+            <i class="ti ti-mail" style="font-size:16px; color:#A71F38; vertical-align:-2px;" aria-hidden="true"></i> <a href="mailto:post@ak-ak.com" style="color:#1A2C4E;">post@ak-ak.com</a></p>
+            <p>Eine betriebliche Datenschutzbeauftragte habe ich nicht benannt und bin hierzu auch nicht verpflichtet.</p>
+          </div>
+
+          <div class="ds-section">
+            <h3>Hosting</h3>
+            <p>Diese Website wird bei IONOS SE, Elgendorfer Str. 57, 56410 Montabaur gehostet. Die IONOS SE ist Auftragsverarbeiter gem&auml;&szlig; Art. 28 DSGVO. Details zur Datenverarbeitung durch IONOS finden Sie in deren Datenschutzerkl&auml;rung unter <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" rel="noopener">www.ionos.de/terms-gtc/datenschutzerklaerung</a>.</p>
+          </div>
+
+          <div class="ds-section">
+            <h3>Erhebung und Speicherung personenbezogener Daten sowie Art und Zweck der Verwendung</h3>
+            <p>Beim Aufrufen meiner Website www.arbeitsrecht-sozialrecht.com werden durch den auf Ihrem Endger&auml;t zum Einsatz kommenden Browser aus technischen Gr&uuml;nden automatisch Informationen an den Server meiner Website gesendet. Diese Informationen werden tempor&auml;r in einem sog. Logfile gespeichert. Folgende Informationen werden dabei ohne Ihr Zutun erfasst und bis zur automatisierten L&ouml;schung gespeichert:</p>
+            <ul>
+              <li>IP-Adresse des anfragenden Rechners</li>
+              <li>Datum und Uhrzeit des Zugriffs</li>
+              <li>Name und URL der abgerufenen Datei</li>
+              <li>Website, von der aus der Zugriff erfolgt (Referrer-URL)</li>
+              <li>verwendeter Browser und Betriebssystem Ihres Rechners sowie Name Ihres Access-Providers</li>
+            </ul>
+            <p>Die genannten Daten werden durch mich zu folgenden Zwecken verarbeitet:</p>
+            <ul>
+              <li>Gew&auml;hrleistung eines reibungslosen Verbindungsaufbaus der Website</li>
+              <li>Gew&auml;hrleistung einer komfortablen Nutzung meiner Website</li>
+              <li>Gew&auml;hrleistung der Netz- und Informationssicherheit</li>
+              <li>Auswertung der Systemsicherheit und -stabilit&auml;t</li>
+            </ul>
+            <p>Die Rechtsgrundlage f&uuml;r die Datenverarbeitung ist Art. 6 Abs. 1 S. 1 lit. f DSGVO. Mein berechtigtes Interesse folgt aus oben aufgelisteten Zwecken zur Datenerhebung, insbesondere der Gew&auml;hrleistung der Netz- und Informationssicherheit (vgl. Erw&auml;gungsgrund 49 der DSGVO).</p>
+            <p>In keinem Fall verwende ich die erhobenen Daten zu dem Zweck, R&uuml;ckschl&uuml;sse auf Ihre Person zu ziehen.</p>
+          </div>
+
+          <div class="ds-section">
+            <h3>Weitergabe von personenbezogenen Daten</h3>
+            <p>Eine &Uuml;bermittlung Ihrer personenbezogenen Daten an Dritte zu anderen als den nachfolgend genannten Zwecken findet nicht statt. Ich gebe Ihre pers&ouml;nlichen Daten nur an Dritte weiter, wenn:</p>
+            <ul>
+              <li>Sie nach Art. 6 Abs. 1 S. 1 lit. a DSGVO ausdr&uuml;cklich Ihre Einwilligung hierzu erteilt haben,</li>
+              <li>die Weitergabe nach Art. 6 Abs. 1 S. 1 lit. f DSGVO zur Geltendmachung, Aus&uuml;bung oder Verteidigung von Rechtsanspr&uuml;chen erforderlich ist und kein Grund zur Annahme besteht, dass Sie ein &uuml;berwiegendes schutzw&uuml;rdiges Interesse an der Nichtweitergabe Ihrer Daten haben,</li>
+              <li>nach Art. 6 Abs. 1 S. 1 lit. c DSGVO eine gesetzliche Verpflichtung zur Weitergabe besteht oder</li>
+              <li>dies gesetzlich zul&auml;ssig und nach Art. 6 Abs. 1 S. 1 lit. b DSGVO f&uuml;r die Abwicklung des Vertragsverh&auml;ltnisses mit Ihnen erforderlich ist.</li>
+            </ul>
+          </div>
+
+          <div class="ds-section">
+            <h3>Cookies</h3>
+            <p>Diese Website verwendet ausschlie&szlig;lich technisch notwendige Session-Cookies, die keine personenbezogenen Daten speichern und am Ende der Browser-Sitzung automatisch gel&ouml;scht werden. Es werden keine Tracking-, Analyse- oder Marketing-Cookies eingesetzt.</p>
+            <p>Rechtsgrundlage f&uuml;r die Verarbeitung ist Art. 6 Abs. 1 S. 1 lit. f DSGVO (berechtigtes Interesse an der technischen Bereitstellung der Website).</p>
+          </div>
+
+          <div class="ds-section">
+            <h3>Google Maps</h3>
+            <p>Auf der Kontaktseite biete ich eine Karte des Kartendienstes Google Maps an, betrieben von Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland (&bdquo;Google&ldquo;). Die Karte wird &uuml;ber eine sogenannte Zwei-Klick-L&ouml;sung eingebunden: Beim Aufruf der Kontaktseite wird zun&auml;chst nur ein Platzhalter mit der Kanzleianschrift angezeigt, es findet noch keine Verbindung zu Google statt. Erst wenn Sie aktiv auf die Schaltfl&auml;che &bdquo;Karte laden &middot; Google Maps aktivieren&ldquo; klicken, wird die eigentliche Karte geladen und eine Verbindung zu Servern von Google hergestellt. Ab diesem Zeitpunkt kann Google Informationen erheben, u.&nbsp;a. Ihre IP-Adresse und Standortdaten.</p>
+            <p>Die Nutzung erfolgt im Interesse einer ansprechenden Darstellung meines Kanzleistandorts und einer leichten Auffindbarkeit der von mir angebotenen Orte. Rechtsgrundlage f&uuml;r das Laden der Karte nach Ihrem Klick ist Ihre Einwilligung gem&auml;&szlig; Art. 6 Abs. 1 S. 1 lit. a DSGVO. Sie k&ouml;nnen die Einwilligung jederzeit durch erneutes Laden der Seite widerrufen. Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerkl&auml;rung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+          </div>
+
+          <div class="ds-section">
+            <h3>Betroffenenrechte</h3>
+            <p>Werden personenbezogene Daten von Ihnen verarbeitet, sind Sie &bdquo;Betroffener&ldquo; im Sinne der DSGVO und es stehen Ihnen folgende Rechte zu:</p>
+            <ul>
+              <li>gem&auml;&szlig; Art. 15 DSGVO Auskunft &uuml;ber Ihre von mir verarbeiteten personenbezogenen Daten zu verlangen;</li>
+              <li>gem&auml;&szlig; Art. 16 DSGVO unverz&uuml;glich die Berichtigung unrichtiger oder Vervollst&auml;ndigung Ihrer bei mir gespeicherten personenbezogenen Daten zu verlangen;</li>
+              <li>gem&auml;&szlig; Art. 17 DSGVO die L&ouml;schung Ihrer bei mir gespeicherten personenbezogenen Daten zu verlangen;</li>
+              <li>gem&auml;&szlig; Art. 18 DSGVO die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen;</li>
+              <li>gem&auml;&szlig; Art. 20 DSGVO Ihre personenbezogenen Daten in einem strukturierten, g&auml;ngigen und maschinenlesbaren Format zu erhalten;</li>
+              <li>gem&auml;&szlig; Art. 7 Abs. 3 DSGVO Ihre einmal erteilte Einwilligung jederzeit gegen&uuml;ber mir zu widerrufen;</li>
+              <li>gem&auml;&szlig; Art. 77 DSGVO sich bei der zust&auml;ndigen Aufsichtsbeh&ouml;rde zu beschweren: <strong>Der Landesbeauftragte f&uuml;r den Datenschutz und die Informationsfreiheit Baden-W&uuml;rttemberg</strong>, Lautenschlagerstra&szlig;e 20, 70173 Stuttgart, <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener">www.baden-wuerttemberg.datenschutz.de</a>;</li>
+              <li>gem&auml;&szlig; Art. 21 DSGVO Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten einzulegen.</li>
+            </ul>
+          </div>
+
+          <div class="ds-section">
+            <h3>Widerspruch der kommerziellen Nutzung meiner Kontaktdaten</h3>
+            <p>Die Nutzung der im Rahmen meines Impressums ver&ouml;ffentlichten Kontaktdaten wie Anschrift, Telefon- und Fax-Nummern sowie E-Mail-Adressen durch Dritte zur &Uuml;bersendung von nicht ausdr&uuml;cklich angeforderten Informationen ist nicht gestattet. Rechtliche Schritte gegen die Versender von sogenannten SPAM-Mails bei Verst&ouml;&szlig;en gegen dieses Verbot bleiben ausdr&uuml;cklich vorbehalten.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div style="position:fixed; bottom:0; left:0; right:0; background:#D3D8DE; border-top:1px solid rgba(167,31,56,0.25); padding:8px 16px 6px; text-align:center; z-index:99; font-size:0.85rem; letter-spacing:0.01em; line-height:1.2; font-weight:700; color:#1A2C4E; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+    &copy; 2026 Anwaltskanzlei Andrea Knebel {{ footerBreak }}<a href="https://www.google.com/maps/search/?api=1&amp;query=Zehntwiesenstr.+5+76275+Ettlingen" target="_blank" rel="noopener" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">Zehntwiesenstr. 5 &ndash; D - 76275 Ettlingen</a> {{ footerBreak }}<a href="tel:+4972437655590" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">+&nbsp;49&nbsp;&nbsp;72 43 / 76 555 90</a> <span style="color:#1A2C4E; opacity:0.4;">|</span> <a href="mailto:post@ak-ak.com" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">post@ak-ak.com</a> {{ footerBreak }}<a href="impressum.html" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">Impressum</a> <span style="color:#1A2C4E; opacity:0.4;">|</span> <a href="datenschutz.html" style="color:#FFFFFF; background:#A71F38; padding:2px 6px; border-radius:2px;">Datenschutz</a> <span style="color:#1A2C4E; opacity:0.4;">|</span> <a href="gesetze.html" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">Gesetze</a>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { isMobile: false, menuOpen: false };
+  componentDidMount() {
+    this.mql = window.matchMedia('(max-width: 880px)');
+    this.update = () => this.setState({ isMobile: this.mql.matches });
+    this.update();
+    this.mql.addEventListener('change', this.update);
+  }
+  componentWillUnmount() {
+    this.mql.removeEventListener('change', this.update);
+  }
+  renderVals() {
+    const m = this.state.isMobile;
+    return {
+      isMobile: m,
+      isNotMobile: !m,
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      nameSize1: m ? '19px' : '26px',
+      nameSize2: m ? '15px' : '21px',
+      subtitleSize: m ? '13px' : '15px',
+      headerGridCols: m ? 'auto 1fr' : 'auto auto 1fr',
+      lockupGap: m ? '12px' : '28px',
+      headerPad: m ? '9px 0' : '13px 0',
+      logoSize: m ? '40px' : '56px',
+      footerBreak: m ? React.createElement('br') : React.createElement('span', {style:{color:'#1A2C4E', opacity:0.4}}, ' | '),
+      pageWrapDisplay: m ? 'flex' : 'block',
+      pageWrapMinHeight: m ? '100vh' : 'auto',
+      mainFlex: m ? '1' : 'initial',
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; padding-bottom: 44px; }
+  a { color: #A71F38; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #A71F38; outline-offset: 1px; }
+  @media (hover: hover) and (pointer: fine) {
+    a:hover { color: #841729; }
+    .navlink:hover .dropdown { display: block !important; }
+  }
+</style>
+</helmet>
+<div style="color:#1A2C4E; line-height:1.7; background:#FFFFFF; display:{{ pageWrapDisplay }}; flex-direction:column; min-height:{{ pageWrapMinHeight }};">
+
+  <header style="position:sticky; top:0; background:#D3D8DE; z-index:100; box-shadow:0 3px 7px rgba(0,0,0,0.14);">
+    <div style="background:#D3D8DE; padding:{{ headerPad }};">
+      <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:{{ headerGridCols }}; grid-template-rows:auto auto; align-items:end; column-gap:{{ lockupGap }}; row-gap:0px;">
+        <img src="assets/AK-AK-Logo.png" alt="AK-AK Logo" style="height:{{ logoSize }}; width:auto; grid-row:1/3; grid-column:1; align-self:center;" />
+        <a href="index.html" style="grid-row:1; grid-column:2; line-height:1; font-family:Arial,Helvetica,sans-serif; font-weight:600; color:#A71F38; letter-spacing:0.02em; white-space:nowrap;">
+          <span style="font-size:{{ nameSize1 }};">A</span><span style="font-size:{{ nameSize2 }};">NWALTS</span><span style="font-size:{{ nameSize1 }};">K</span><span style="font-size:{{ nameSize2 }};">ANZLEI </span><span style="font-size:{{ nameSize1 }};">A</span><span style="font-size:{{ nameSize2 }};">NDREA&nbsp;</span><span style="font-size:{{ nameSize1 }};">K</span><span style="font-size:{{ nameSize2 }};">NEBEL</span>
+        </a>
+        <div style="grid-row:1; grid-column:3; text-align:right; line-height:1; font-family:Arial,Helvetica,sans-serif; font-size:{{ subtitleSize }}; font-weight:700; color:#A71F38; letter-spacing:0.01em;">Rechtsanw&auml;ltin</div>
+        <div style="grid-row:2; grid-column:2; margin-top:-4px; display:flex; justify-content:space-between; align-items:baseline; gap:8px; font-family:Arial,Helvetica,sans-serif; font-size:{{ subtitleSize }}; font-weight:700; color:#A71F38; letter-spacing:0.01em;">
+          <span>Kanzlei f&uuml;r Arbeits- und Sozialrecht</span>
+          <span style="flex:1; display:flex; justify-content:center;"><span style="color:#A71F38; opacity:0.4; font-weight:400;">|</span></span>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Zehntwiesenstr.+5+76275+Ettlingen" target="_blank" rel="noopener" style="color:#A71F38; font-weight:600; white-space:nowrap;" style-hover="text-decoration:underline;">76275 Ettlingen</a>
+        </div>
+        <div style="grid-row:2; grid-column:3; margin-top:-4px; text-align:right; font-family:Arial,Helvetica,sans-serif; font-size:{{ subtitleSize }}; font-weight:700; color:#A71F38; letter-spacing:0.01em;">Fachanw&auml;ltin f&uuml;r: Arbeitsrecht &middot; Sozialrecht</div>
+      </div>
+    </div>
+
+    <sc-if value="{{ isNotMobile }}" hint-placeholder-val="{{ true }}">
+    <div style="background:#D3D8DE; border-top:2px solid rgba(167,31,56,0.35);">
+      <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:flex; justify-content:center;">
+        <ul style="display:flex; gap:8px; list-style:none; font-size:1.02rem; align-items:stretch;">
+          <li style="display:flex;"><a href="index.html" aria-label="Startseite" style="display:flex; align-items:center; padding:6px 16px; color:#1A2C4E;" style-hover="background:#1A2C4E;color:#FFFFFF;"><i class="ti ti-home" style="font-size:20px;"></i></a></li>
+          <li style="display:flex;"><a href="kanzlei.html" style="display:flex; align-items:center; padding:6px 16px; color:#1A2C4E; font-weight:400;" style-hover="background:#1A2C4E;color:#FFFFFF;">Kanzlei</a></li>
+          <li class="navlink" style="position:relative; display:flex;">
+            <a href="leistungen.html" style="display:flex; align-items:center; gap:5px; white-space:nowrap; padding:6px 16px; color:#FFFFFF; background:#1A2C4E; font-weight:600; align-self:stretch;">Leistungen <span style="font-size:10px;">&#9662;</span></a>
+            <div class="dropdown" style="display:none; position:absolute; top:100%; left:0; background:#FFFFFF; box-shadow:0 4px 12px rgba(0,0,0,0.12); min-width:220px; z-index:200;">
+              <a href="leistungen-arbeitsrecht.html" style="display:block; padding:11px 18px; border-bottom:1px solid rgba(26,44,78,0.1); color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Arbeitsrecht</a>
+              <a href="leistungen-sozialrecht.html" style="display:block; padding:11px 18px; border-bottom:1px solid rgba(26,44,78,0.1); color:#FFFFFF; background:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;">Sozialrecht</a>
+              <a href="leistungen-vorsorgeplanung.html" style="display:block; padding:11px 18px; color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Vorsorgeplanung</a>
+            </div>
+          </li>
+          <li style="display:flex;"><a href="vita.html" style="display:flex; align-items:center; padding:6px 16px; color:#1A2C4E; font-weight:400;" style-hover="background:#1A2C4E;color:#FFFFFF;">Vita</a></li>
+          <li class="navlink" style="position:relative; display:flex;">
+            <a href="fachanwalt.html" style="display:flex; align-items:center; gap:5px; white-space:nowrap; padding:6px 16px; color:#1A2C4E; font-weight:400; align-self:stretch;" style-hover="background:#1A2C4E;color:#FFFFFF;">Fachanwalt <span style="font-size:10px;">&#9662;</span></a>
+            <div class="dropdown" style="display:none; position:absolute; top:100%; left:0; background:#FFFFFF; box-shadow:0 4px 12px rgba(0,0,0,0.12); min-width:260px; z-index:200;">
+              <a href="fortbildungen-arbeitsrecht.html" style="display:block; padding:11px 18px; border-bottom:1px solid rgba(26,44,78,0.1); color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Fortbildungen Arbeitsrecht</a>
+              <a href="fortbildungen-sozialrecht.html" style="display:block; padding:11px 18px; color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Fortbildungen Sozialrecht</a>
+            </div>
+          </li>
+          <li style="display:flex;"><a href="kosten.html" style="display:flex; align-items:center; padding:6px 16px; color:#1A2C4E; font-weight:400;" style-hover="background:#1A2C4E;color:#FFFFFF;">Kosten</a></li>
+          <li style="display:flex;"><a href="kontakt.html" style="display:flex; align-items:center; padding:6px 16px; margin-left:4px; color:#A71F38; font-weight:600; border:1px solid #A71F38; border-radius:3px;" style-hover="background:#A71F38;color:#FFFFFF;">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <div style="background:#D3D8DE; border-top:2px solid #A71F38; border-bottom:2px solid #A71F38; display:flex; align-items:center; justify-content:space-between; padding:0 20px;">
+      <span style="color:#1A2C4E; font-weight:700; font-size:14px;">Men&uuml;</span>
+      <button type="button" onClick="{{ toggleMenu }}" aria-label="Men&uuml; &ouml;ffnen" style="background:none; border:none; padding:16px 4px; cursor:pointer; display:flex; align-items:center;">
+        <i class="ti ti-menu-2" style="font-size:26px; color:#1A2C4E;"></i>
+      </button>
+    </div>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="background:#FFFFFF; border-bottom:2px solid #A71F38;">
+        <ul style="list-style:none; font-size:0.95rem;">
+          <li><a href="index.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700;">Startseite</a></li>
+          <li><a href="kanzlei.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Kanzlei</a></li>
+          <li><a href="leistungen.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Leistungen</a></li>
+          <li><a href="leistungen-sozialrecht.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px 14px 36px; color:#FFFFFF; background:#A71F38; font-weight:700; border-top:1px solid rgba(237,224,196,0.15);">Sozialrecht</a></li>
+          <li><a href="vita.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Vita</a></li>
+          <li><a href="fachanwalt.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Fachanwalt</a></li>
+          <li><a href="kosten.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Kosten</a></li>
+          <li><a href="kontakt.html" onClick="{{ closeMenu }}" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Kontakt</a></li>
+        </ul>
+      </div>
+    </sc-if>
+    </sc-if>
+  </header>
+
+  <main style="flex:{{ mainFlex }};">
+    <h1 style="position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); border:0;">Fachanw&auml;ltin f&uuml;r Sozialrecht in Ettlingen</h1>
+
+    <section style="padding:56px 0 60px;">
+      <div style="max-width:1140px; margin:0 auto; padding:0 24px;">
+        <div style="max-width:65ch;">
+          <p style="font-size:0.82rem; letter-spacing:0.18em; text-transform:uppercase; color:#A71F38; font-weight:700; margin-bottom:14px; display:flex; align-items:center; gap:12px;"><span style="width:3px; height:18px; background:#1A2C4E; display:inline-block;"></span>Leistungen &middot; Sozialrecht</p>
+          <h2 style="font-size:1.9rem; line-height:1.4; margin-bottom:24px;">
+            <span style="font-weight:700; color:#1A2C4E;">Leistungen im:</span><br />
+            <span style="font-weight:700; color:#A71F38;">Sozialrecht</span>
+          </h2>
+
+          <div style="background:#EAEDF0; border:1px solid rgba(167,31,56,0.3); border-left:3px solid #1A2C4E; padding:18px 20px; font-size:0.95rem; line-height:1.75; color:#1A2C4E; margin-bottom:20px;">
+            <strong style="color:#A71F38;">Bitte beachten Sie,</strong> dass ich <span style="text-decoration:underline; text-decoration-color:#A71F38; text-decoration-thickness:1px;">nicht</span> in folgenden Bereichen t&auml;tig bin:
+            <ul style="margin:10px 0 0 0; padding-left:1.1em; line-height:1.9;">
+              <li>Grundsicherung f&uuml;r Arbeitsuchende (SGB II) [ehemals &bdquo;Hartz 4&ldquo; / B&uuml;rgergeld]</li>
+              <li>Kinder- und Jugendhilfe (SGB VIII)</li>
+              <li>Gesetzliche Pflegeversicherung (SGB XI)</li>
+              <li>Sozialhilfe (SGB XII)</li>
+              <li>Kindergeld (BKGG / EStG)</li>
+              <li>Wohngeld (WoGG)</li>
+            </ul>
+          </div>
+
+          <p style="font-size:0.95rem; color:#1A2C4E; line-height:1.75; text-align:justify; margin-bottom:20px;">In folgenden <span style="text-decoration:underline; text-decoration-color:#A71F38; text-decoration-thickness:1px;">ausgew&auml;hlten</span> Teilbereichen des <strong style="color:#A71F38;">Sozialrechts</strong> bin ich gerne f&uuml;r Sie t&auml;tig:</p>
+
+          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:0 0 10px 0;">SGB IV &ndash; Gemeinsame Vorschriften</h3>
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify;">
+            <li>Scheinselbst&auml;ndigkeit</li>
+            <li>Statusfeststellungsverfahren / Anfrageverfahren (Einzugsstelle, Rentenversicherung / Familienangeh&ouml;rige, GmbH-Gesch&auml;ftsf&uuml;hrer)</li>
+            <li>Betriebspr&uuml;fung / Beitrags(nach)forderung / S&auml;umniszuschl&auml;ge / Verj&auml;hrung / Haftung (Arbeitgeber / Gesch&auml;ftsf&uuml;hrer) / Stundung / Ratenzahlung</li>
+            <li>Geringf&uuml;gige Besch&auml;ftigung</li>
+            <li>Sozialversicherungspflicht bei Gesellschaften</li>
+          </ul>
+
+          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB III &ndash; Arbeitsf&ouml;rderung</h3>
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0;">
+            <li>Versicherungspflicht</li>
+            <li>Berufsausbildungsbeihilfe</li>
+            <li>Berufliche Weiterbildung</li>
+            <li>Gr&uuml;ndungszuschuss</li>
+            <li>Kurzarbeitergeld</li>
+            <li>&Uuml;bergangsgeld</li>
+            <li>Arbeitslosengeld</li>
+            <li>Insolvenzgeld</li>
+            <li>Meldepflichten</li>
+          </ul>
+
+          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB V &ndash; Gesetzliche Krankenversicherung</h3>
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify;">
+            <li>Versicherungspflicht, Versicherungsfreiheit, Befreiung von der Versicherungspflicht</li>
+            <li>Wechsel / R&uuml;ckkehr von privater Krankenversicherung zu gesetzlicher Krankenversicherung</li>
+            <li>Kostenerstattung</li>
+            <li>Krankenbehandlung (u.a. Heilmittel, Hilfsmittel, h&auml;usliche Krankenpflege, Krankenhausbehandlung, Leistungen zur medizinischen Rehabilitation)</li>
+            <li>Krankengeld</li>
+            <li>Zahnersatz</li>
+            <li>Fahrkosten</li>
+          </ul>
+
+          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB VI &ndash; Gesetzliche Rentenversicherung</h3>
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify;">
+            <li>Versicherungspflicht (Besch&auml;ftigte, selbst&auml;ndig T&auml;tige, sonstige Versicherte, auf Antrag)</li>
+            <li>Versicherungsfreiheit / Befreiung von der Versicherungspflicht / freiwillige Versicherung</li>
+            <li>Medizinische Rehabilitation / Kinderrehabilitation / Teilhabe am Arbeitsleben</li>
+            <li>Renten wegen Alters: Regelaltersrente, f&uuml;r schwerbehinderte Menschen, f&uuml;r langj&auml;hrig Versicherte, f&uuml;r besonders langj&auml;hrig Versicherte</li>
+            <li>Renten wegen verminderter Erwerbsf&auml;higkeit: teilweise Erwerbsminderung, volle Erwerbsminderung, teilweise Erwerbsminderung bei Berufsunf&auml;higkeit</li>
+            <li>Renten wegen Todes: Witwen-/Witwerrente, Waisenrente</li>
+            <li>Wartezeit / Beitragszeit / Kindererziehungszeit / Ber&uuml;cksichtigungszeit / Anrechnungszeit / Zurechnungszeit</li>
+            <li>Hinzuverdienst</li>
+          </ul>
+
+          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB VII &ndash; Gesetzliche Unfallversicherung</h3>
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify;">
+            <li>Versicherung kraft Gesetzes / Satzung / Versicherungsfreiheit / freiwillige Versicherung</li>
+            <li>Arbeitsunfall / Berufskrankheit</li>
+            <li>Heilbehandlung / Teilhabe am Arbeitsleben</li>
+            <li>Verletzengeld / Verletzenrente / Leistungen an Hinterbliebene</li>
+            <li>Gefahrtarif / Gefahrklassen / Beitragsbescheid</li>
+          </ul>
+
+          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB IX &ndash; Rehabilitation und Teilhabe von Menschen mit Behinderungen</h3>
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0;">
+            <li>Schwerbehinderung / Gleichstellung</li>
+            <li>Leistungen zur medizinischen Rehabilitation</li>
+            <li>Leistungen zur Teilhabe am Arbeitsleben</li>
+          </ul>
+
+          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGG &ndash; Sozialgerichtsgesetz</h3>
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify;">
+            <li>Sozialgerichtsverfahren: Sozialgerichte / Landessozialgerichte / Bundessozialgericht</li>
+            <li>Anfechtungsklage / Leistungsklage / Verpflichtungsklage / Feststellungsklage / Unt&auml;tigkeitsklage / Fortsetzungsfeststellungsklage / Nichtigkeitsklage</li>
+            <li>Vorl&auml;ufiger Rechtsschutz / Eilverfahren</li>
+            <li>Berufung / Revision / Beschwerde</li>
+            <li>Beweisaufnahme / medizinische Gutachten von Amts wegen / Antragsgutachten (&sect;&nbsp;109 SGG)</li>
+          </ul>
+
+          <div style="border-top:1px solid rgba(26,44,78,0.2); margin-top:24px; padding-top:24px;"></div>
+
+          <p style="font-size:0.95rem; color:#1A2C4E; line-height:1.75; margin-bottom:16px;">Meine Dienstleistungen f&uuml;r Sie im <strong style="color:#A71F38;">Sozialrecht:</strong></p>
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0;">
+            <li>Au&szlig;ergerichtliche Beratung und Vertretung</li>
+            <li>Widerspruchsverfahren vor Beh&ouml;rden</li>
+            <li>Gerichtliche Vertretung vor den Sozial- und Landessozialgerichten und dem Bundessozialgericht (Hauptsacheverfahren &ndash; Einstweiliger Rechtsschutz / Rechtsmittelverfahren)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div style="position:fixed; bottom:0; left:0; right:0; background:#D3D8DE; border-top:1px solid rgba(167,31,56,0.25); padding:8px 16px 6px; text-align:center; z-index:99; font-size:0.85rem; letter-spacing:0.01em; line-height:1.2; font-weight:700; color:#1A2C4E; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+    &copy; 2026 Anwaltskanzlei Andrea Knebel {{ footerBreak }}<a href="https://www.google.com/maps/search/?api=1&amp;query=Zehntwiesenstr.+5+76275+Ettlingen" target="_blank" rel="noopener" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">Zehntwiesenstr. 5 &ndash; D - 76275 Ettlingen</a> {{ footerBreak }}<a href="tel:+4972437655590" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">+&nbsp;49&nbsp;&nbsp;72 43 / 76 555 90</a> <span style="color:#1A2C4E; opacity:0.4;">|</span> <a href="mailto:post@ak-ak.com" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">post@ak-ak.com</a> {{ footerBreak }}<a href="impressum.html" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">Impressum</a> <span style="color:#1A2C4E; opacity:0.4;">|</span> <a href="datenschutz.html" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">Datenschutz</a> <span style="color:#1A2C4E; opacity:0.4;">|</span> <a href="gesetze.html" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">Gesetze</a>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { isMobile: false, menuOpen: false };
+  componentDidMount() {
+    this.mql = window.matchMedia('(max-width: 880px)');
+    this.update = () => this.setState({ isMobile: this.mql.matches });
+    this.update();
+    this.mql.addEventListener('change', this.update);
+  }
+  componentWillUnmount() {
+    this.mql.removeEventListener('change', this.update);
+  }
+  renderVals() {
+    const m = this.state.isMobile;
+    return {
+      isMobile: m,
+      isNotMobile: !m,
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      nameSize1: m ? '19px' : '26px',
+      nameSize2: m ? '15px' : '21px',
+      subtitleSize: m ? '13px' : '15px',
+      headerGridCols: m ? 'auto 1fr' : 'auto auto 1fr',
+      lockupGap: m ? '12px' : '28px',
+      headerPad: m ? '9px 0' : '13px 0',
+      logoSize: m ? '40px' : '56px',
+      footerBreak: m ? React.createElement('br') : React.createElement('span', {style:{color:'#1A2C4E', opacity:0.4}}, ' | '),
+      pageWrapDisplay: m ? 'flex' : 'block',
+      pageWrapMinHeight: m ? '100vh' : 'auto',
+      mainFlex: m ? '1' : 'initial',
+    };
+  }
+}
+
+</script>
+</body>
+</html>
