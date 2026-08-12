@@ -1,131 +1,269 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@800&display=swap" rel="stylesheet">
+<meta name="description" content="Kanzlei Andrea Knebel in Ettlingen: Rechtsanwältin und Fachanwältin für Arbeitsrecht und Sozialrecht / Beratung und gerichtliche &amp; außergerichtliche Vertretung">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>Fachanwältin für: Arbeitsrecht und Sozialrecht | Ettlingen</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: Arial, Helvetica, sans-serif; padding-bottom: 44px; }
+  body { overflow-wrap: break-word; word-break: break-word; }
+  body { font-family: Arial, Helvetica, sans-serif; padding-bottom: var(--ak-foot-h, 38px); }
   a { color: #A71F38; text-decoration: none; }
   a:focus-visible, button:focus-visible { outline: 2px solid #A71F38; outline-offset: 1px; }
   @media (hover: hover) and (pointer: fine) {
     a:hover { color: #841729; }
-    .navlink:hover .dropdown { display: block !important; }
-    .footlink:hover { color: #A71F38; }
+    .ak-rail.show { display: block !important; }
+    .footlink:hover { color: #A71F38 !important; }
+    .ak-foot-legal-links .footlink:hover { color: #1A2C4E !important; border-bottom-color: #EDE0C4 !important; }
   }
-
-  .nav-mobile-bar { display: none !important; }
-  @media (max-width: 880px) {
-    header div[style*="padding:13px 0;"] { padding:9px 0 !important; }
-    header div[style*="grid-template-rows:auto auto; align-items:end;"] { grid-template-columns:auto 1fr !important; column-gap:12px !important; }
-    header img[style*="grid-row:1/3; grid-column:1;"] { height:40px !important; }
-    header span[style*="font-size:26px;"] { font-size:19px !important; }
-    header span[style*="font-size:21px;"] { font-size:15px !important; }
-    header div[style*="font-size:15px; font-weight:700; color:#A71F38; letter-spacing:0.01em;"] { font-size:13px !important; }
-    [style*="gap:56px; align-items:flex-start;"] { flex-direction:column !important; }
-    [style*="width:1px; align-self:stretch; background:rgba(26,44,78,0.2);"] { display:none !important; }
-    [style*="grid-template-columns:repeat(3,1fr);"] { grid-template-columns:1fr !important; }
-    .nav-desktop { display:none !important; }
-    .nav-mobile-bar { display:flex !important; }
-    .fb-d { display:none !important; }
-    .fb-m { display:block !important; }
-  }
-  .fb-m { display:none; }
 </style>
-<div style="color:#1A2C4E; line-height:1.7; background:#FFFFFF; display:flex; flex-direction:column; min-height:100vh;">
 
-  <header style="position:sticky; top:0; background:#D3D8DE; z-index:100; box-shadow:0 3px 7px rgba(0,0,0,0.14);">
-    <div style="background:#D3D8DE; padding:13px 0;">
-      <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:auto auto 1fr; grid-template-rows:auto auto; align-items:end; column-gap:28px; row-gap:0px;">
-        <img src="assets/AK-AK-Logo.png" alt="AK-AK Logo" style="height:56px; width:auto; grid-row:1/3; grid-column:1; align-self:center;" />
-        <div style="grid-row:1; grid-column:2; line-height:1; font-family:Arial,Helvetica,sans-serif; font-weight:600; color:#A71F38; letter-spacing:0.02em; white-space:nowrap;">
-          <a href="index.html" style="color:#A71F38;">
-          <span style="font-size:26px;">A</span><span style="font-size:21px;">NWALTS</span><span style="font-size:26px;">K</span><span style="font-size:21px;">ANZLEI </span><span style="font-size:26px;">A</span><span style="font-size:21px;">NDREA&nbsp;</span><span style="font-size:26px;">K</span><span style="font-size:21px;">NEBEL</span>
-          </a>
+<style>
+.hov1{text-decoration:none;}
+.skip-link{position:absolute; left:-9999px; top:0; width:1px; height:1px; overflow:hidden; z-index:1000;}
+.skip-link:focus{left:12px; top:12px; width:auto; height:auto; overflow:visible; background:#1A2C4E; color:#FFFFFF; padding:12px 22px; border-radius:3px; font-weight:700; font-size:0.9rem; text-decoration:none;}
+.hov2{color:#1A2C4E;}
+.hov3{color:#1A2C4E;}
+.hov4{color:#1A2C4E;}
+.hov5{color:#1A2C4E;}
+.hov6{color:#1A2C4E;}
+.hov7{color:#1A2C4E;}
+.hov8{color:#1A2C4E;}
+.hov9{color:#1A2C4E;}
+.hov10{color:#1A2C4E;}
+.hov11{color:#1A2C4E;}
+.hov12{color:#1A2C4E;}
+.hov15{background:transparent;color:#1A2C4E;border:2px solid #A71F38;}
+.hov13{background:transparent;color:#1A2C4E;border:2px solid #A71F38;}
+.hov14{background:transparent;color:#1A2C4E;}
+@media (hover: hover) and (pointer: fine) {
+.hov1:hover{text-decoration:underline;}
+.hov2:hover::before{border-color:#EDE0C4;}
+.hov3:hover::before{border-color:#EDE0C4;}
+.hov4:hover::before{border-color:#EDE0C4;}
+.hov5:hover::before{border-color:#EDE0C4;}
+.hov6:hover::before{border-color:#EDE0C4;}
+.hov7:hover::before{border-color:#EDE0C4;}
+.hov8:hover::before{border-color:#EDE0C4;}
+.hov9:hover::before{border-color:#EDE0C4;}
+.hov10:hover::before{border-color:#EDE0C4;}
+.hov11:hover::before{border-color:#EDE0C4;}
+.hov12:hover::before{border-color:#EDE0C4;}
+.hov15:hover{background:#A71F38;color:#FFFFFF;border-color:#A71F38;}
+.hov13:hover{background:#A71F38;color:#FFFFFF;border-color:#A71F38;}
+.hov14:hover{color:#A71F38;border-color:#A71F38;}
+}
+</style>
+
+<style>
+@media (max-width: 880px) {
+  .ak-header-pad{padding:28px 0 22px !important;}
+  .ak-n1{font-size:28px !important;}
+  .ak-n2{font-size:24px !important;}
+  .ak-sub{font-size:14px !important;}
+  .ak-meta{font-size:12px !important;}
+  .ak-header-flex{flex-direction:column !important; gap:14px !important;}
+  .ak-header-eyebrow-logo{height:12px !important;}
+  .ak-header-divider{display:none !important;}
+  .ak-nav-desktop{display:none !important;}
+  .ak-nav-mobile{display:flex !important;}
+  .ak-grid3{grid-template-columns:1fr !important;}
+  .ak-hero-flex{flex-direction:column !important;}
+  .ak-hero-divider{display:none !important;}
+  .ak-footer-legal{position:static !important;}
+  body{padding-bottom:0 !important;}
+  .ak-foot-row{flex-direction:column !important; align-items:flex-start !important; gap:10px !important; padding:14px 16px !important;}
+  .ak-foot-group{gap:10px !important; justify-content:flex-start !important;}
+  .ak-fb{display:block !important;}
+  .ak-fb-pipe{display:none !important;}
+  .ak-hours-flex{flex-wrap:wrap !important;}
+  .ak-hours-nowrap{white-space:normal !important;}
+  .ak-page-wrap{display:flex !important; flex-direction:column !important; min-height:100vh !important;}
+  .ak-main-grow{flex:1 !important;}
+}
+.ak-nav-mobile{display:none;}
+.ak-mobile-panel{display:none;}
+.ak-mobile-panel.open{display:block;}
+.ak-fb{display:none;}
+.ak-sub-panel{display:none;}
+.ak-sub-panel.open{display:block;}
+.ak-rail{display:none;}
+.ak-foot-row{flex-wrap:wrap;}
+.ak-nav-desktop nav a::before, .ak-rail a::before{content:''; position:absolute; left:0; right:0; top:50%; transform:translateY(-50%); height:34px; border:2px solid transparent; box-sizing:border-box; pointer-events:none;}
+.ak-rail a::before{height:30px;}
+.ak-nav-desktop nav a:hover, .ak-rail a:hover{color:#1A2C4E;}
+.ak-foot-row{flex-wrap:wrap;}
+</style>
+<script>
+function akToggle(id){var el=document.getElementById(id); if(el) el.classList.toggle('open');}
+function akClose(){var p=document.getElementById('ak-mobile-panel'); if(p) p.classList.remove('open');}
+document.addEventListener('DOMContentLoaded',function(){
+
+  var foot=document.querySelector('.ak-footer-legal'), lastFoot=null;
+  function footH(){
+    if(!foot) return;
+    var fixed=getComputedStyle(foot).position==='fixed';
+    var v=fixed ? foot.offsetHeight+'px' : '0px';
+    if(v===lastFoot) return;
+    lastFoot=v;
+    document.body.style.setProperty('--ak-foot-h', v);
+  }
+  window.addEventListener('resize',footH); window.addEventListener('load',footH); footH();
+
+  var bar2=document.querySelector('.ak-nav-desktop');
+  var pairs=[['nl-l','rail-l'],['nl-f','rail-f']];
+  var t=null;
+  function hideAll(){pairs.forEach(function(p){var r=document.getElementById(p[1]); if(r) r.classList.remove('show');});}
+  pairs.forEach(function(p){
+    var link=document.getElementById(p[0]), r=document.getElementById(p[1]);
+    if(!link||!r) return;
+    function open(){clearTimeout(t); hideAll(); r.classList.add('show');}
+    link.addEventListener('mouseenter',open);
+    link.addEventListener('mousemove',function(){clearTimeout(t);});
+    link.addEventListener('focus',open);
+    r.addEventListener('mouseenter',function(){clearTimeout(t);});
+  });
+  if(bar2){
+    bar2.addEventListener('mousemove',function(e){
+      var inTrigger=e.target.closest('#nl-l,#nl-f');
+      var inRow=e.target.closest('#rail-l,#rail-f');
+      if(inTrigger||inRow){ clearTimeout(t); return; }
+      if(e.target.closest('a')){ clearTimeout(t); t=setTimeout(hideAll,150); }
+    });
+    bar2.addEventListener('mouseleave',function(){clearTimeout(t); t=setTimeout(hideAll,600);});
+    bar2.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('focus',function(){
+        if(a.id==='nl-l'||a.id==='nl-f'||a.closest('#rail-l,#rail-f')) return;
+        clearTimeout(t); hideAll();
+      });
+    });
+  }
+  document.addEventListener('keydown',function(e){if(e.key==='Escape') hideAll();});
+});
+</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+
+<div class="ak-page-wrap" style="color:#1A2C4E; line-height:1.7; background:#FFFFFF;">
+
+  <header style="position:sticky; top:0; background:#FFFFFF; z-index:100; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
+    <div style="background:#FFFFFF; padding:20px 0 18px; text-align:center;" class="ak-header-pad">
+      <div style="max-width:1140px; margin:0 auto; padding:0 24px;">
+        <img src="data:image/png;base64,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" alt="AK &sect; AK" class="ak-header-eyebrow-logo" style="height:19px; width:auto; display:block; margin:0 auto 12px;">
+        <a href="index.html"><div style="font-weight:700; color:#A71F38; letter-spacing:0.05em; line-height:1.1;" class="ak-wordmark">
+          <span style="font-size:37px; color:#1A2C4E;" class="ak-n1">A</span><span style="font-size:32px;" class="ak-n2">NWALTS</span><span style="font-size:37px; color:#1A2C4E;" class="ak-n1">K</span><span style="font-size:32px;" class="ak-n2">ANZLEI </span><span style="font-size:37px; color:#1A2C4E;" class="ak-n1">A</span><span style="font-size:32px;" class="ak-n2">NDREA&nbsp;</span><span style="font-size:37px; color:#1A2C4E;" class="ak-n1">K</span><span style="font-size:32px;" class="ak-n2">NEBEL</span>
+        </div></a>
+        <div style="font-size:19px; font-weight:400; color:#A71F38; letter-spacing:0.05em; text-transform:uppercase; margin-top:4px;" class="ak-sub">
+          Kanzlei f&uuml;r<br class="ak-fb" /><span class="ak-fb-pipe"> </span>Arbeits- und Sozialrecht
         </div>
-        <div style="grid-row:1; grid-column:3; text-align:right; line-height:1; font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:700; color:#A71F38; letter-spacing:0.01em;">Rechtsanw&auml;ltin</div>
-        <div style="grid-row:2; grid-column:2; margin-top:-4px; display:flex; justify-content:space-between; align-items:baseline; gap:8px; font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:700; color:#A71F38; letter-spacing:0.01em;">
-          <span>Kanzlei f&uuml;r Arbeits- und Sozialrecht</span>
-          <span style="flex:1; display:flex; justify-content:center;"><span style="color:#A71F38; opacity:0.4; font-weight:400;">|</span></span>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=Zehntwiesenstr.+5+76275+Ettlingen" target="_blank" rel="noopener" style="color:#A71F38; font-weight:600; white-space:nowrap;" style-hover="text-decoration:underline;">76275 Ettlingen</a>
+        <div style="font-size:16px; font-weight:400; color:#A71F38; margin-top:6px; letter-spacing:0.01em;" class="ak-meta">
+          <span style="white-space:nowrap;">Rechtsanw&auml;ltin</span> &middot; <span style="white-space:nowrap;">Fachanw&auml;ltin f&uuml;r Arbeitsrecht</span> &middot; <span style="white-space:nowrap;">Fachanw&auml;ltin f&uuml;r Sozialrecht</span> &middot; <a href="https://www.google.com/maps/search/?api=1&amp;query=Zehntwiesenstr.+5+76275+Ettlingen" target="_blank" rel="noopener" style="color:#A71F38" class="hov1">D - 76275 Ettlingen</a>
         </div>
-        <div style="grid-row:2; grid-column:3; margin-top:-4px; text-align:right; font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:700; color:#A71F38; letter-spacing:0.01em;">Fachanw&auml;ltin f&uuml;r: Arbeitsrecht &middot; Sozialrecht</div>
       </div>
     </div>
 
-    <div class="nav-desktop" style="background:#D3D8DE; border-top:2px solid rgba(167,31,56,0.35);">
-      <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:flex; justify-content:center;">
-        <ul style="display:flex; gap:8px; list-style:none; font-size:1.02rem; align-items:stretch;">
-          <li style="display:flex;"><a href="index.html" aria-label="Startseite" style="display:flex; align-items:center; padding:6px 16px; color:#FFFFFF; background:#1A2C4E;"><i class="ti ti-home" style="font-size:20px;"></i></a></li>
-          <li style="display:flex;"><a href="kanzlei.html" style="display:flex; align-items:center; padding:6px 16px; color:#1A2C4E; font-weight:400;" style-hover="background:#1A2C4E;color:#FFFFFF;">Kanzlei</a></li>
-          <li class="navlink" style="position:relative; display:flex;">
-            <a href="leistungen.html" style="display:flex; align-items:center; gap:5px; white-space:nowrap; padding:6px 16px; color:#1A2C4E; font-weight:400;" style-hover="background:#1A2C4E;color:#FFFFFF;">Leistungen <span style="font-size:10px;">&#9662;</span></a>
-            <div class="dropdown" style="display:none; position:absolute; top:100%; left:0; background:#FFFFFF; box-shadow:0 4px 12px rgba(0,0,0,0.12); min-width:220px; z-index:200;">
-              <a href="leistungen-arbeitsrecht.html" style="display:block; padding:11px 18px; border-bottom:1px solid rgba(26,44,78,0.1); color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Arbeitsrecht</a>
-              <a href="leistungen-sozialrecht.html" style="display:block; padding:11px 18px; border-bottom:1px solid rgba(26,44,78,0.1); color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Sozialrecht</a>
-              <a href="leistungen-vorsorgeplanung.html" style="display:block; padding:11px 18px; color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Vorsorgeplanung</a>
-            </div>
+    <div class="ak-nav-desktop" style="background:#FFFFFF; border-top:1px solid rgba(26,44,78,0.2); border-bottom:1px solid #EDE0C4; position:relative;">
+      <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; min-height:50px;">
+        <nav aria-label="Hauptnavigation" style="display:flex;">
+        <ul style="display:flex; gap:8px; list-style:none; align-items:center; margin-left:-9px;">
+          <li style="display:flex;"><a href="index.html" aria-label="Startseite" style="display:flex; align-items:center; position:relative; height:44px; padding:0 9px; color:#A71F38;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 2px;"></span></a></li>
+          <li style="display:flex;"><a href="kanzlei.html" class="hov2" style="display:flex; align-items:center; position:relative; height:44px; padding:0 9px; font-weight:700; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;">Kanzlei</a></li>
+          <li class="navlink" style="display:flex;"><a id="nl-l" href="leistungen.html" class="hov3" style="display:flex; align-items:center; position:relative; height:44px; padding:0 9px; font-weight:700; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;">Leistungen<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:1em; height:1em; display:inline-block; flex:none; font-size:11px; color:#1A2C4E; margin-left:8px; line-height:1; display:block;" aria-hidden="true"><path d="M17 9.3a1 1 0 0 1 .7 1.7l-5 5a1 1 0 0 1 -1.4 0l-5 -5a1 1 0 0 1 .7 -1.7z"/></svg></a>
           </li>
-          <li style="display:flex;"><a href="vita.html" style="display:flex; align-items:center; padding:6px 16px; color:#1A2C4E; font-weight:400;" style-hover="background:#1A2C4E;color:#FFFFFF;">Vita</a></li>
-          <li class="navlink" style="position:relative; display:flex;">
-            <a href="fachanwalt.html" style="display:flex; align-items:center; gap:5px; white-space:nowrap; padding:6px 16px; color:#1A2C4E; font-weight:400;" style-hover="background:#1A2C4E;color:#FFFFFF;">Fachanwalt <span style="font-size:10px;">&#9662;</span></a>
-            <div class="dropdown" style="display:none; position:absolute; top:100%; left:0; background:#FFFFFF; box-shadow:0 4px 12px rgba(0,0,0,0.12); min-width:260px; z-index:200;">
-              <a href="fortbildungen-arbeitsrecht.html" style="display:block; padding:11px 18px; border-bottom:1px solid rgba(26,44,78,0.1); color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Fortbildungen Arbeitsrecht</a>
-              <a href="fortbildungen-sozialrecht.html" style="display:block; padding:11px 18px; color:#1A2C4E; font-weight:600; font-size:0.85rem; white-space:nowrap;" style-hover="background:#1A2C4E;color:#FFFFFF;">Fortbildungen Sozialrecht</a>
-            </div>
+          <li style="display:flex;"><a href="vita.html" class="hov7" style="display:flex; align-items:center; position:relative; height:44px; padding:0 9px; font-weight:700; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;">Vita</a></li>
+          <li class="navlink" style="display:flex;"><a id="nl-f" href="fachanwalt.html" class="hov8" style="display:flex; align-items:center; position:relative; height:44px; padding:0 9px; font-weight:700; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;">Fachanwalt<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:1em; height:1em; display:inline-block; flex:none; font-size:11px; color:#1A2C4E; margin-left:8px; line-height:1; display:block;" aria-hidden="true"><path d="M17 9.3a1 1 0 0 1 .7 1.7l-5 5a1 1 0 0 1 -1.4 0l-5 -5a1 1 0 0 1 .7 -1.7z"/></svg></a>
           </li>
-          <li style="display:flex;"><a href="kosten.html" style="display:flex; align-items:center; padding:6px 16px; color:#1A2C4E; font-weight:400;" style-hover="background:#1A2C4E;color:#FFFFFF;">Kosten</a></li>
-          <li style="display:flex;"><a href="kontakt.html" style="display:flex; align-items:center; padding:6px 16px; margin-left:4px; color:#A71F38; font-weight:600; border:1px solid #A71F38; border-radius:3px;" style-hover="background:#A71F38;color:#FFFFFF;">Kontakt</a></li>
+          <li style="display:flex;"><a href="kosten.html" class="hov11" style="display:flex; align-items:center; position:relative; height:44px; padding:0 9px; font-weight:700; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;">Kosten</a></li>
         </ul>
+        </nav>
+        <div style="display:flex; align-items:center; flex:0 0 auto;">
+          <a href="kontakt.html" class="hov13" style="display:block; font-weight:700; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:7px 15px; white-space:nowrap;">Kontakt</a>
+        </div>
+      </div>
+      <div id="rail-l" class="ak-rail" style="position:absolute; top:100%; left:0; right:0; background:#FFFFFF; border-top:1px solid #EDE0C4; border-bottom:1px solid #EDE0C4; box-shadow:0 12px 26px rgba(26,44,78,0.10); z-index:200;">
+        <div style="max-width:1140px; margin:0 auto; padding:0 24px 0 15px; display:flex; align-items:center; gap:6px; min-height:40px;">
+          <a href="leistungen-arbeitsrecht.html" class="hov4" style="display:flex; align-items:center; position:relative; height:40px; padding:0 9px; font-weight:700; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; white-space:nowrap;">Arbeitsrecht</a>
+          <span style="display:flex; align-items:center;" aria-hidden="true"><span style="display:block; width:1px; height:14px; background:#EDE0C4;"></span></span>
+          <a href="leistungen-sozialrecht.html" class="hov5" style="display:flex; align-items:center; position:relative; height:40px; padding:0 9px; font-weight:700; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; white-space:nowrap;">Sozialrecht</a>
+          <span style="display:flex; align-items:center;" aria-hidden="true"><span style="display:block; width:1px; height:14px; background:#EDE0C4;"></span></span>
+          <a href="leistungen-vorsorgeplanung.html" class="hov6" style="display:flex; align-items:center; position:relative; height:40px; padding:0 9px; font-weight:700; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; white-space:nowrap;">Vorsorgeplanung</a>
+        </div>
+      </div>
+      <div id="rail-f" class="ak-rail" style="position:absolute; top:100%; left:0; right:0; background:#FFFFFF; border-top:1px solid #EDE0C4; border-bottom:1px solid #EDE0C4; box-shadow:0 12px 26px rgba(26,44,78,0.10); z-index:200;">
+        <div style="max-width:1140px; margin:0 auto; padding:0 24px 0 15px; display:flex; align-items:center; gap:6px; min-height:40px;">
+          <a href="fortbildungen-arbeitsrecht.html" class="hov9" style="display:flex; align-items:center; position:relative; height:40px; padding:0 9px; font-weight:700; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; white-space:nowrap;">Fortbildungen Arbeitsrecht</a>
+          <span style="display:flex; align-items:center;" aria-hidden="true"><span style="display:block; width:1px; height:14px; background:#EDE0C4;"></span></span>
+          <a href="fortbildungen-sozialrecht.html" class="hov10" style="display:flex; align-items:center; position:relative; height:40px; padding:0 9px; font-weight:700; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; white-space:nowrap;">Fortbildungen Sozialrecht</a>
+        </div>
       </div>
     </div>
-
-    <div class="nav-mobile-bar" style="background:#D3D8DE; border-top:2px solid #A71F38; border-bottom:2px solid #A71F38; display:flex; align-items:center; justify-content:space-between; padding:0 20px;">
-      <span style="color:#1A2C4E; font-weight:700; font-size:14px;">Men&uuml;</span>
-      <button type="button" onclick="toggleMobileMenu()" aria-label="Men&uuml; &ouml;ffnen" style="background:none; border:none; padding:16px 4px; cursor:pointer; display:flex; align-items:center;">
-        <i class="ti ti-menu-2" style="font-size:26px; color:#1A2C4E;"></i>
-      </button>
-    </div>
-      <div id="mobileMenuPanel" style="display:none; background:#FFFFFF; border-bottom:2px solid #A71F38;">
-        <ul style="list-style:none; font-size:0.95rem;">
-          <li><a href="index.html" onclick="closeMobileMenu()" style="display:block; padding:14px 20px; color:#FFFFFF; background:#A71F38; font-weight:700;">Startseite</a></li>
-          <li><a href="kanzlei.html" onclick="closeMobileMenu()" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Kanzlei</a></li>
-          <li><a href="leistungen.html" onclick="closeMobileMenu()" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Leistungen</a></li>
-          <li><a href="vita.html" onclick="closeMobileMenu()" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Vita</a></li>
-          <li><a href="fachanwalt.html" onclick="closeMobileMenu()" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Fachanwalt</a></li>
-          <li><a href="kosten.html" onclick="closeMobileMenu()" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Kosten</a></li>
-          <li><a href="kontakt.html" onclick="closeMobileMenu()" style="display:block; padding:14px 20px; color:#1A2C4E; font-weight:700; border-top:1px solid rgba(26,44,78,0.15);">Kontakt</a></li>
-        </ul>
+    
+    <div class="ak-nav-mobile" style="background:#FFFFFF; border-top:1px solid rgba(26,44,78,0.2); border-bottom:1px solid #EDE0C4; align-items:center; justify-content:space-between; padding:0 20px;">
+      <a href="index.html" aria-label="Startseite" style="display:flex; align-items:center; padding:16px 0; color:#1A2C4E;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 4px;"></span></a>
+      <div style="display:flex; align-items:center; gap:14px; flex:0 0 auto;">
+        <a href="kontakt.html" class="hov13" style="display:block; font-weight:700; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; padding:7px 12px; white-space:nowrap;">Kontakt</a>
+        <button type="button" onclick="akToggle('ak-mobile-panel')" aria-label="Men&uuml; &ouml;ffnen" style="background:none; border:none; padding:16px 0 16px 4px; cursor:pointer; display:flex; align-items:center;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:26px; color:#1A2C4E;" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+        </button>
       </div>
+    </div>
+    <div id="ak-mobile-panel" class="ak-mobile-panel" style="background:#FFFFFF; border-bottom:1px solid #EDE0C4;">
+      <ul style="list-style:none;">
+        <li style="border-top:1px solid #EDE0C4;"><a href="index.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid #A71F38;">Startseite</a></li>
+        <li style="border-top:1px solid #EDE0C4;"><a href="kanzlei.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Kanzlei</a></li>
+        <li style="border-top:1px solid #EDE0C4;">
+          <button type="button" onclick="akToggle('ak-sub-l')" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
+            <span>Leistungen</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:16px;" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
+          </button>
+          <div id="ak-sub-l" class="ak-sub-panel">
+            <a href="leistungen.html" onclick="akClose()" style="display:block; padding:13px 20px 13px 34px; color:#1A2C4E; font-size:0.95rem; border-top:1px solid #EDE0C4;">&Uuml;bersicht</a>
+            <a href="leistungen-arbeitsrecht.html" onclick="akClose()" style="display:block; padding:13px 20px 13px 34px; color:#1A2C4E; font-size:0.95rem; border-top:1px solid #EDE0C4;">Arbeitsrecht</a>
+            <a href="leistungen-sozialrecht.html" onclick="akClose()" style="display:block; padding:13px 20px 13px 34px; color:#1A2C4E; font-size:0.95rem; border-top:1px solid #EDE0C4;">Sozialrecht</a>
+            <a href="leistungen-vorsorgeplanung.html" onclick="akClose()" style="display:block; padding:13px 20px 13px 34px; color:#1A2C4E; font-size:0.95rem; border-top:1px solid #EDE0C4;">Vorsorgeplanung</a>
+          </div>
+        </li>
+        <li style="border-top:1px solid #EDE0C4;"><a href="vita.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Vita</a></li>
+        <li style="border-top:1px solid #EDE0C4;">
+          <button type="button" onclick="akToggle('ak-sub-f')" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
+            <span>Fachanwalt</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:16px;" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
+          </button>
+          <div id="ak-sub-f" class="ak-sub-panel">
+            <a href="fachanwalt.html" onclick="akClose()" style="display:block; padding:13px 20px 13px 34px; color:#1A2C4E; font-size:0.95rem; border-top:1px solid #EDE0C4;">&Uuml;bersicht</a>
+            <a href="fortbildungen-arbeitsrecht.html" onclick="akClose()" style="display:block; padding:13px 20px 13px 34px; color:#1A2C4E; font-size:0.95rem; border-top:1px solid #EDE0C4;">Fortbildungen Arbeitsrecht</a>
+            <a href="fortbildungen-sozialrecht.html" onclick="akClose()" style="display:block; padding:13px 20px 13px 34px; color:#1A2C4E; font-size:0.95rem; border-top:1px solid #EDE0C4;">Fortbildungen Sozialrecht</a>
+          </div>
+        </li>
+        <li style="border-top:1px solid #EDE0C4;"><a href="kosten.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Kosten</a></li>
+        <li style="border-top:1px solid #EDE0C4;"><a href="kontakt.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Kontakt</a></li>
+      </ul>
+    </div>
   </header>
 
-  <main style="flex:1;">
+  <main class="ak-main-grow" id="main-content">
     <h1 style="position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); border:0;">Fachanw&auml;ltin f&uuml;r Arbeitsrecht und Sozialrecht in Ettlingen</h1>
 
-    <section style="padding:80px 0 20px;">
-      <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:flex; flex-direction:row; gap:56px; align-items:flex-start;">
+    <section style="padding:56px 0 20px;">
+      <div class="ak-hero-flex" style="max-width:1140px; margin:0 auto; padding:0 24px; display:flex; gap:56px; align-items:flex-start;">
         <div style="flex:1.2;">
-          <h2 style="font-size:2.4rem; line-height:1.25; margin-bottom:22px; color:#1A2C4E;">
-            <span style="font-weight:700; color:#1A2C4E;">Ihr Recht im:</span><br/>
+          <h2 style="font-size:1.9rem; line-height:1.4; margin-bottom:22px; color:#1A2C4E;">
+            <span style="font-weight:700; color:#1A2C4E;">Ihr Recht im:</span><br />
             <span style="font-weight:700; color:#A71F38;">Arbeitsrecht &middot; Sozialrecht</span>
           </h2>
-          <ul style="list-style:none; margin-bottom:26px; padding:0;">
-            <li style="font-size:1.15rem; font-weight:400; color:#1A2C4E; line-height:1.7; padding-left:22px; position:relative;"><span style="position:absolute; left:0; top:12px; width:14px; height:3px; background:#1A2C4E;"></span>Beratung</li>
-            <li style="font-size:1.15rem; font-weight:400; color:#1A2C4E; line-height:1.7; padding-left:22px; position:relative;"><span style="position:absolute; left:0; top:12px; width:14px; height:3px; background:#1A2C4E;"></span>Au&szlig;ergerichtliche Vertretung</li>
-            <li style="font-size:1.15rem; font-weight:400; color:#1A2C4E; line-height:1.7; padding-left:22px; position:relative; white-space:nowrap;"><span style="position:absolute; left:0; top:12px; width:14px; height:3px; background:#1A2C4E;"></span>Gerichtliche Vertretung: Arbeits- und Sozialgerichte</li>
+          <ul style="list-style:none; margin:0 0 26px; padding:0; max-width:46ch;">
+            <li style="font-size:1.15rem; font-weight:400; color:#1A2C4E; line-height:1.7; padding-left:22px; position:relative;"><span style="position:absolute; left:0; top:50%; transform:translateY(-50%); width:14px; height:3px; background:#1A2C4E;"></span>Beratung</li>
+            <li style="font-size:1.15rem; font-weight:400; color:#1A2C4E; line-height:1.7; padding-left:22px; position:relative;"><span style="position:absolute; left:0; top:50%; transform:translateY(-50%); width:14px; height:3px; background:#1A2C4E;"></span>Au&szlig;ergerichtliche Vertretung</li>
+            <li style="font-size:1.15rem; font-weight:400; color:#1A2C4E; line-height:1.7; padding-left:22px; position:relative; white-space:nowrap;"><span style="position:absolute; left:0; top:50%; transform:translateY(-50%); width:14px; height:3px; background:#1A2C4E;"></span>Gerichtliche Vertretung: Arbeits- und Sozialgerichte</li>
           </ul>
-          <a href="leistungen.html" style="display:inline-block; white-space:nowrap; border-width:1px; border-style:solid; border-color:#A71F38; background:transparent; color:#A71F38; font-size:0.8rem; font-weight:600; padding:6px 16px; border-radius:3px;" style-hover="background:#A71F38;color:#FFFFFF;">Leistungen ansehen</a>
+          <a href="leistungen.html" style="display:inline-flex; align-items:center; gap:8px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:9px 16px; border:2px solid transparent;" class="hov14">Leistungen ansehen &rarr;</a>
         </div>
-        <div style="width:1px; align-self:stretch; background:rgba(26,44,78,0.2); display:block;"></div>
-        <div style="flex:0.85; background:#EAEDF0; padding:26px 28px; border-radius:4px; border:1px solid rgba(167,31,56,0.3); border-left:3px solid #1A2C4E;">
-          <div style="font-size:0.95rem; letter-spacing:0.18em; text-transform:uppercase; color:#A71F38; font-weight:800; margin-bottom:12px;">Aktuelles</div>
+        <div class="ak-hero-divider" style="width:1px; align-self:stretch; background:rgba(26,44,78,0.2);"></div>
+        <div style="flex:0.85; background:#EDE0C4; padding:26px 28px; border-radius:4px; border-left:3px solid #A71F38;">
+          <div style="font-size:0.8rem; letter-spacing:0.18em; text-transform:uppercase; color:#A71F38; font-weight:700; margin-bottom:12px;">Aktuelles</div>
           <div style="font-size:1.2rem; font-weight:700; color:#1A2C4E; margin-bottom:10px;">Vorsicht bei Aufhebungsvertr&auml;gen!</div>
-          <div style="font-size:0.95rem; color:#1A2C4E; line-height:1.75; text-align:justify;">Arbeitnehmer und Arbeitgeber sollten beim Abschluss eines Aufhebungsvertrags an m&ouml;gliche erhebliche negative sozialrechtliche Folgen wie Sperr- oder Ruhenszeiten denken. <strong style="font-weight:600;">Lassen Sie sich daher lieber bereits vor Abschluss anwaltlich beraten!</strong></div>
+          <div style="font-size:0.95rem; color:#1A2C4E; line-height:1.75; text-align:justify; hyphens:auto; -webkit-hyphens:auto; hyphenate-limit-chars:6 3 3;">Arbeitnehmer und Arbeitgeber sollten beim Abschluss eines Aufhebungsvertrags an m&ouml;gliche erhebliche negative sozialrechtliche Folgen wie Sperr- oder Ruhenszeiten denken. <strong style="font-weight:600;">Lassen Sie sich daher lieber bereits vor Abschluss anwaltlich beraten!</strong></div>
         </div>
       </div>
     </section>
@@ -133,95 +271,100 @@
     <section style="padding:44px 0;">
       <div style="max-width:1140px; margin:0 auto; padding:0 24px;">
         <div style="border-top:1px solid rgba(26,44,78,0.2); margin-bottom:44px;"></div>
-        <p style="font-size:0.82rem; letter-spacing:0.18em; text-transform:uppercase; color:#A71F38; font-weight:700; margin-bottom:14px; display:flex; align-items:center; gap:12px;"><span style="width:3px; height:18px; background:#1A2C4E; display:inline-block;"></span>Kanzlei</p>
+        <p style="font-size:0.8rem; letter-spacing:0.18em; text-transform:uppercase; color:#A71F38; font-weight:700; margin-bottom:14px; display:flex; align-items:center; gap:12px;"><span style="width:3px; height:18px; background:#1A2C4E; display:inline-block;"></span>Kanzlei</p>
         <h2 style="font-size:1.9rem; line-height:1.4; margin-bottom:24px;">
-          <span style="font-weight:700; color:#1A2C4E;">Seit 1997 an Ihrer Seite:</span><br/>
+          <span style="font-weight:700; color:#1A2C4E;">Seit 1997 an Ihrer Seite:</span><br />
           <span style="font-weight:700; color:#A71F38;">bundesweit.</span>
         </h2>
-        <p style="max-width:65ch; margin-bottom:18px; color:#1A2C4E; line-height:1.8; text-align:justify;">Meine Kanzlei ist auf das Arbeitsrecht und <span style="color:#1A2C4E; text-decoration:underline; text-decoration-color:#A71F38; text-decoration-thickness:2px;">ausgew&auml;hlte</span> Teilbereiche des Sozialrechts spezialisiert.</p>
-        <p style="max-width:65ch; margin-bottom:18px; color:#1A2C4E; line-height:1.8; text-align:justify;">
-          Ich berate und vertrete <strong style="color:#A71F38;">Arbeitgeber</strong>, <strong style="color:#A71F38;">Arbeitnehmer</strong> einschlie&szlig;lich <strong style="color:#A71F38;">leitender Angestellter</strong>, <strong style="color:#A71F38;">Betriebsr&auml;te</strong>, <strong style="color:#A71F38;">Einrichtungen der sozialen Wohlfahrtspflege</strong> und <strong style="color:#A71F38;">Bezieher von Sozialleistungen</strong> &ndash; au&szlig;ergerichtlich, vor den Arbeits- und Sozialgerichten sowie gegen&uuml;ber den mit dem Arbeits- und Sozialrecht befassten Beh&ouml;rden.
+        <p style="max-width:75ch; margin-bottom:18px; color:#1A2C4E; line-height:1.8; text-align:justify; hyphens:auto; -webkit-hyphens:auto; hyphenate-limit-chars:6 3 3;">Meine Kanzlei ist auf das Arbeitsrecht und <span style="color:#1A2C4E; text-decoration:underline; text-decoration-color:#1A2C4E; text-decoration-thickness:2px;">ausgew&auml;hlte</span> Teilbereiche des Sozialrechts spezialisiert.</p>
+        <p style="max-width:75ch; margin-bottom:18px; color:#1A2C4E; line-height:1.8; text-align:justify; hyphens:auto; -webkit-hyphens:auto; hyphenate-limit-chars:6 3 3;">
+          Ich berate und vertrete <strong style="color:#A71F38;">Arbeitgeber</strong>, <strong style="color:#A71F38;">Arbeitnehmer</strong> einschlie&szlig;lich <strong style="color:#A71F38;">leitender Angestellter</strong>, <strong style="color:#A71F38;">Betriebsr&auml;te</strong>, <strong style="color:#A71F38;">Einrichtungen der sozialen Wohlfahrtspflege</strong> und <strong style="color:#A71F38;">Bezieher von Sozialleistungen</strong> &ndash; au&szlig;ergerichtlich, vor den <span style="white-space:nowrap;">Arbeits- und Sozialgerichte</span>n sowie gegen&uuml;ber den mit dem Arbeits- und Sozialrecht befassten Beh&ouml;rden.
         </p>
-        <p style="max-width:65ch; color:#1A2C4E; line-height:1.8; text-align:justify;">Dar&uuml;ber hinaus habe ich mich auf die <strong style="color:#A71F38;">Vorsorgeplanung</strong> im medizinischen Bereich spezialisiert.</p>
+        <p style="max-width:75ch; color:#1A2C4E; line-height:1.8; text-align:justify; hyphens:auto; -webkit-hyphens:auto; hyphenate-limit-chars:6 3 3;">Dar&uuml;ber hinaus habe ich mich auf die <strong style="color:#A71F38;">Vorsorgeplanung</strong> im medizinischen Bereich spezialisiert.</p>
       </div>
     </section>
 
     <section style="padding:0 0 60px;">
       <div style="max-width:1140px; margin:0 auto; padding:0 24px;">
         <div style="border-top:1px solid rgba(26,44,78,0.2); margin-bottom:44px;"></div>
-        <p style="font-size:0.82rem; letter-spacing:0.18em; text-transform:uppercase; color:#A71F38; font-weight:700; margin-bottom:14px; display:flex; align-items:center; gap:12px;"><span style="width:3px; height:18px; background:#1A2C4E; display:inline-block;"></span>Leistungen</p>
+        <p style="font-size:0.8rem; letter-spacing:0.18em; text-transform:uppercase; color:#A71F38; font-weight:700; margin-bottom:14px; display:flex; align-items:center; gap:12px;"><span style="width:3px; height:18px; background:#1A2C4E; display:inline-block;"></span>Leistungen</p>
         <h2 style="font-size:1.9rem; margin-bottom:32px; line-height:1.4;">
-          <span style="font-weight:700; color:#1A2C4E;">Drei Schwerpunkte, ein Ziel:</span><br/>
+          <span style="font-weight:700; color:#1A2C4E;">Drei Schwerpunkte, ein Ziel:</span><br />
           <span style="font-weight:700; color:#A71F38;">Ihnen, zu Ihrem Recht verhelfen.</span>
         </h2>
-        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+        <div class="ak-grid3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
 
-          <div style="padding:34px 28px; border:1px solid rgba(26,44,78,0.2); border-top:3px solid #1A2C4E; border-radius:4px; box-shadow:0 1px 6px rgba(0,0,0,0.05); display:flex; flex-direction:column;">
+          <div style="padding:34px 28px; border:1px solid rgba(26,44,78,0.2); border-top:4px solid #1A2C4E; border-radius:4px; box-shadow:0 1px 6px rgba(0,0,0,0.05); display:flex; flex-direction:column;">
             <div style="width:52px; height:52px; margin-bottom:20px;">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" style="width:100%;height:100%;">
-                <rect x="10" y="16" width="28" height="22" rx="2" stroke="#A71F38" stroke-width="2.5"></rect>
-                <path d="M18 16v-5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5" stroke="#A71F38" stroke-width="2.5"></path>
-                <line x1="10" y1="27" x2="38" y2="27" stroke="#A71F38" stroke-width="2.5"></line>
-                <line x1="24" y1="23" x2="24" y2="31" stroke="#A71F38" stroke-width="2.5"></line>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" style="width:100%;height:100%;" aria-hidden="true">
+                <rect x="10" y="16" width="28" height="22" rx="2" stroke="#1A2C4E" stroke-width="2.5"></rect>
+                <path d="M18 16v-5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5" stroke="#1A2C4E" stroke-width="2.5"></path>
+                <line x1="10" y1="27" x2="38" y2="27" stroke="#1A2C4E" stroke-width="2.5"></line>
+                <line x1="24" y1="23" x2="24" y2="31" stroke="#1A2C4E" stroke-width="2.5"></line>
               </svg>
             </div>
             <h3 style="font-size:1.2rem; margin-bottom:12px; color:#1A2C4E;">Arbeitsrecht</h3>
-            <p style="color:#1A2C4E; font-size:0.92rem; line-height:1.7; text-align:justify;">Rat, Unterst&uuml;tzung und Vertretung bei individual- und kollektivrechtlichen Problemstellungen &ndash; von K&uuml;ndigungen &uuml;ber Aufhebungsvertr&auml;ge bis hin zu Betriebsvereinbarungen.</p>
-            <div style="margin-top:auto; padding-top:20px;"><a href="leistungen-arbeitsrecht.html" style="display:inline-block; white-space:nowrap; border-width:1px; border-style:solid; border-color:#A71F38; background:transparent; color:#A71F38; font-size:0.8rem; font-weight:600; padding:6px 16px; border-radius:3px;" style-hover="background:#A71F38;color:#FFFFFF;">Mehr erfahren &rarr;</a></div>
+            <p style="color:#1A2C4E; font-size:0.95rem; line-height:1.75; text-align:justify; hyphens:auto; -webkit-hyphens:auto; hyphenate-limit-chars:6 3 3;">Rat, Unterst&uuml;tzung und Vertretung bei individual- und kollektivrechtlichen Problemstellungen &ndash; von K&uuml;ndigungen &uuml;ber Aufhebungsvertr&auml;ge bis hin zu Betriebsvereinbarungen.</p>
+            <div style="margin-top:auto; padding-top:20px; margin-left:-16px;">
+              <a href="leistungen-arbeitsrecht.html" style="display:inline-flex; align-items:center; gap:8px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:9px 16px; border:2px solid transparent;" class="hov14">Mehr erfahren<span aria-hidden="true" style="letter-spacing:0; font-size:13px;">&rarr;</span></a>
+            </div>
           </div>
 
-          <div style="padding:34px 28px; border:1px solid rgba(26,44,78,0.2); border-top:3px solid #1A2C4E; border-radius:4px; box-shadow:0 1px 6px rgba(0,0,0,0.05); display:flex; flex-direction:column;">
+          <div style="padding:34px 28px; border:1px solid rgba(26,44,78,0.2); border-top:4px solid #1A2C4E; border-radius:4px; box-shadow:0 1px 6px rgba(0,0,0,0.05); display:flex; flex-direction:column;">
             <div style="width:52px; height:52px; margin-bottom:20px;">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="width:100%;height:100%;">
-                <circle cx="12" cy="15" r="4" fill="none" stroke="#A71F38" stroke-width="2.5"></circle>
-                <line x1="12" y1="19" x2="12" y2="30" stroke="#A71F38" stroke-width="2.5" stroke-linecap="round"></line>
-                <line x1="12" y1="30" x2="8" y2="38" stroke="#A71F38" stroke-width="2.5" stroke-linecap="round"></line>
-                <line x1="12" y1="30" x2="16" y2="38" stroke="#A71F38" stroke-width="2.5" stroke-linecap="round"></line>
-                <circle cx="24" cy="15" r="4" fill="none" stroke="#A71F38" stroke-width="2.5"></circle>
-                <line x1="24" y1="19" x2="24" y2="30" stroke="#A71F38" stroke-width="2.5" stroke-linecap="round"></line>
-                <line x1="24" y1="30" x2="20" y2="38" stroke="#A71F38" stroke-width="2.5" stroke-linecap="round"></line>
-                <line x1="24" y1="30" x2="28" y2="38" stroke="#A71F38" stroke-width="2.5" stroke-linecap="round"></line>
-                <circle cx="36" cy="15" r="4" fill="none" stroke="#A71F38" stroke-width="2.5"></circle>
-                <line x1="36" y1="19" x2="36" y2="30" stroke="#A71F38" stroke-width="2.5" stroke-linecap="round"></line>
-                <line x1="36" y1="30" x2="32" y2="38" stroke="#A71F38" stroke-width="2.5" stroke-linecap="round"></line>
-                <line x1="36" y1="30" x2="40" y2="38" stroke="#A71F38" stroke-width="2.5" stroke-linecap="round"></line>
-                <path d="M16 23 Q24 20 32 23" fill="none" stroke="#A71F38" stroke-width="2.5" stroke-linecap="round"></path>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="width:100%;height:100%;" aria-hidden="true">
+                <circle cx="12" cy="15" r="4" fill="none" stroke="#1A2C4E" stroke-width="2.5"></circle>
+                <line x1="12" y1="19" x2="12" y2="30" stroke="#1A2C4E" stroke-width="2.5" stroke-linecap="round"></line>
+                <line x1="12" y1="30" x2="8" y2="38" stroke="#1A2C4E" stroke-width="2.5" stroke-linecap="round"></line>
+                <line x1="12" y1="30" x2="16" y2="38" stroke="#1A2C4E" stroke-width="2.5" stroke-linecap="round"></line>
+                <circle cx="24" cy="15" r="4" fill="none" stroke="#1A2C4E" stroke-width="2.5"></circle>
+                <line x1="24" y1="19" x2="24" y2="30" stroke="#1A2C4E" stroke-width="2.5" stroke-linecap="round"></line>
+                <line x1="24" y1="30" x2="20" y2="38" stroke="#1A2C4E" stroke-width="2.5" stroke-linecap="round"></line>
+                <line x1="24" y1="30" x2="28" y2="38" stroke="#1A2C4E" stroke-width="2.5" stroke-linecap="round"></line>
+                <circle cx="36" cy="15" r="4" fill="none" stroke="#1A2C4E" stroke-width="2.5"></circle>
+                <line x1="36" y1="19" x2="36" y2="30" stroke="#1A2C4E" stroke-width="2.5" stroke-linecap="round"></line>
+                <line x1="36" y1="30" x2="32" y2="38" stroke="#1A2C4E" stroke-width="2.5" stroke-linecap="round"></line>
+                <line x1="36" y1="30" x2="40" y2="38" stroke="#1A2C4E" stroke-width="2.5" stroke-linecap="round"></line>
+                <path d="M16 23 Q24 20 32 23" fill="none" stroke="#1A2C4E" stroke-width="2.5" stroke-linecap="round"></path>
               </svg>
             </div>
             <h3 style="font-size:1.2rem; margin-bottom:12px; color:#1A2C4E;">Sozialrecht</h3>
-            <p style="color:#1A2C4E; font-size:0.92rem; line-height:1.7; text-align:justify; margin-bottom:0;">Vertretung in <span style="color:#1A2C4E; text-decoration:underline; text-decoration-color:#A71F38; text-decoration-thickness:2px;">ausgew&auml;hlten</span> Teilbereichen des Sozialrechts &mdash; schwerpunktm&auml;&szlig;ig an der Schnittstelle zum Arbeitsrecht,</p>
-            <div style="color:#1A2C4E; font-size:0.92rem; line-height:1.7;">
-              <span style="color:#1A2C4E; text-decoration:underline; text-decoration-color:#A71F38; text-decoration-thickness:2px;">nur</span> in den Bereichen:<br/>
-              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&ndash; Arbeitsf&ouml;rderung&nbsp;<span style="white-space:nowrap;">(SGB III)</span></span>
-              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&ndash; Gesetzliche Krankenversicherung&nbsp;<span style="white-space:nowrap;">(SGB V)</span></span>
-              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&ndash; Gesetzliche Rentenversicherung&nbsp;<span style="white-space:nowrap;">(SGB VI)</span></span>
-              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&ndash; Gesetzliche Unfallversicherung&nbsp;<span style="white-space:nowrap;">(SGB VII)</span></span>
-              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&ndash; Rehabilitation und Teilhabe von Menschen mit Behinderungen&nbsp;<span style="white-space:nowrap;">(SGB IX)</span></span>
-              und <span style="color:#1A2C4E; text-decoration:underline; text-decoration-color:#A71F38; text-decoration-thickness:2px;">nicht</span> in den Bereichen:<br/>
-              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&ndash; Grundsicherung f&uuml;r Arbeitsuchende&nbsp;<span style="white-space:nowrap;">(SGB II)</span> [ehemals &bdquo;Hartz 4&ldquo; / B&uuml;rgergeld]</span>
-              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&ndash; Kinder- und Jugendhilfe&nbsp;<span style="white-space:nowrap;">(SGB VIII)</span></span>
-              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&ndash; Gesetzliche Pflegeversicherung&nbsp;<span style="white-space:nowrap;">(SGB XI)</span></span>
-              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&ndash; Sozialhilfe&nbsp;<span style="white-space:nowrap;">(SGB XII)</span></span>
-              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&ndash; Kindergeld (BKGG / EStG)</span>
-              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&ndash; Wohngeld (WoGG)</span>
+            <p style="color:#1A2C4E; font-size:0.95rem; line-height:1.75; text-align:justify; hyphens:auto; -webkit-hyphens:auto; hyphenate-limit-chars:6 3 3;">Vertretung in <span style="color:#1A2C4E; text-decoration:underline; text-decoration-color:#1A2C4E; text-decoration-thickness:2px;">ausgew&auml;hlten</span> Teilbereichen des Sozialrechts &mdash; schwerpunktm&auml;&szlig;ig an der Schnittstelle zum Arbeitsrecht,<br />
+              <span style="color:#1A2C4E; text-decoration:underline; text-decoration-color:#1A2C4E; text-decoration-thickness:2px;">nur</span> in den Bereichen:<br />
+              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&middot; Arbeitsf&ouml;rderung (SGB III)</span>
+              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&middot; Gesetzliche Krankenversicherung (SGB V)</span>
+              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&middot; Gesetzliche Rentenversicherung (SGB VI)</span>
+              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&middot; Gesetzliche Unfallversicherung (SGB VII)</span>
+              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&middot; Rehabilitation und Teilhabe von Menschen mit Behinderungen (SGB IX)</span>
+              und <span style="color:#1A2C4E; text-decoration:underline; text-decoration-color:#1A2C4E; text-decoration-thickness:2px;">nicht</span> in den Bereichen:<br />
+              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&middot; Grundsicherung f&uuml;r Arbeitsuchende (SGB II) [ehemals &bdquo;Hartz 4&ldquo; / B&uuml;rgergeld]</span>
+              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&middot; Kinder- und Jugendhilfe (SGB VIII)</span>
+              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&middot; Gesetzliche Pflegeversicherung (SGB XI)</span>
+              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&middot; Sozialhilfe (SGB XII)</span>
+              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&middot; Kindergeld (BKGG / EStG)</span>
+              <span style="display:block; padding-left:0.8em; text-indent:-0.8em;">&middot; Wohngeld (WoGG)</span>
+            </p>
+            <div style="margin-top:auto; padding-top:20px; margin-left:-16px;">
+              <a href="leistungen-sozialrecht.html" style="display:inline-flex; align-items:center; gap:8px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:9px 16px; border:2px solid transparent;" class="hov14">Mehr erfahren<span aria-hidden="true" style="letter-spacing:0; font-size:13px;">&rarr;</span></a>
             </div>
-            <div style="margin-top:auto; padding-top:20px;"><a href="leistungen-sozialrecht.html" style="display:inline-block; white-space:nowrap; border-width:1px; border-style:solid; border-color:#A71F38; background:transparent; color:#A71F38; font-size:0.8rem; font-weight:600; padding:6px 16px; border-radius:3px;" style-hover="background:#A71F38;color:#FFFFFF;">Mehr erfahren &rarr;</a></div>
           </div>
 
-          <div style="padding:34px 28px; border:1px solid rgba(26,44,78,0.2); border-top:3px solid #1A2C4E; border-radius:4px; box-shadow:0 1px 6px rgba(0,0,0,0.05); display:flex; flex-direction:column;">
+          <div style="padding:34px 28px; border:1px solid rgba(26,44,78,0.2); border-top:4px solid #1A2C4E; border-radius:4px; box-shadow:0 1px 6px rgba(0,0,0,0.05); display:flex; flex-direction:column;">
             <div style="width:52px; height:52px; margin-bottom:20px;">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" style="width:100%;height:100%;">
-                <rect x="11" y="8" width="22" height="30" rx="2" stroke="#A71F38" stroke-width="2.5"></rect>
-                <line x1="17" y1="16" x2="27" y2="16" stroke="#A71F38" stroke-width="2.5" stroke-linecap="round"></line>
-                <line x1="17" y1="22" x2="27" y2="22" stroke="#A71F38" stroke-width="2.5" stroke-linecap="round"></line>
-                <line x1="17" y1="28" x2="22" y2="28" stroke="#A71F38" stroke-width="2.5" stroke-linecap="round"></line>
-                <path d="M29 32 l3-3 4 4-5 5-4-4z" stroke="#A71F38" stroke-width="2" stroke-linejoin="round"></path>
-                <line x1="32" y1="29" x2="36" y2="33" stroke="#A71F38" stroke-width="2"></line>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" style="width:100%;height:100%;" aria-hidden="true">
+                <rect x="11" y="8" width="22" height="30" rx="2" stroke="#1A2C4E" stroke-width="2.5"></rect>
+                <line x1="17" y1="16" x2="27" y2="16" stroke="#1A2C4E" stroke-width="2.5" stroke-linecap="round"></line>
+                <line x1="17" y1="22" x2="27" y2="22" stroke="#1A2C4E" stroke-width="2.5" stroke-linecap="round"></line>
+                <line x1="17" y1="28" x2="22" y2="28" stroke="#1A2C4E" stroke-width="2.5" stroke-linecap="round"></line>
+                <path d="M29 32 l3-3 4 4-5 5-4-4z" stroke="#1A2C4E" stroke-width="2" stroke-linejoin="round"></path>
+                <line x1="32" y1="29" x2="36" y2="33" stroke="#1A2C4E" stroke-width="2"></line>
               </svg>
             </div>
             <h3 style="font-size:1.2rem; margin-bottom:12px; color:#1A2C4E;">Vorsorgeplanung</h3>
-            <p style="color:#1A2C4E; font-size:0.92rem; line-height:1.7; text-align:justify;">Ich erstelle f&uuml;r Sie Vorsorgevollmachten, Patientenverf&uuml;gungen und Betreuungsverf&uuml;gungen und berate Sie umfassend zu Ihrer individuellen Vorsorgeplanung.</p>
-            <div style="margin-top:auto; padding-top:20px;"><a href="leistungen-vorsorgeplanung.html" style="display:inline-block; white-space:nowrap; border-width:1px; border-style:solid; border-color:#A71F38; background:transparent; color:#A71F38; font-size:0.8rem; font-weight:600; padding:6px 16px; border-radius:3px;" style-hover="background:#A71F38;color:#FFFFFF;">Mehr erfahren &rarr;</a></div>
+            <p style="color:#1A2C4E; font-size:0.95rem; line-height:1.75; text-align:justify; hyphens:auto; -webkit-hyphens:auto; hyphenate-limit-chars:6 3 3;">Ich erstelle f&uuml;r Sie Vorsorgevollmachten, Patientenverf&uuml;gungen und Betreuungsverf&uuml;gungen und berate Sie umfassend zu Ihrer individuellen Vorsorgeplanung.</p>
+            <div style="margin-top:auto; padding-top:20px; margin-left:-16px;">
+              <a href="leistungen-vorsorgeplanung.html" style="display:inline-flex; align-items:center; gap:8px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:9px 16px; border:2px solid transparent;" class="hov14">Mehr erfahren<span aria-hidden="true" style="letter-spacing:0; font-size:13px;">&rarr;</span></a>
+            </div>
           </div>
 
         </div>
@@ -229,33 +372,23 @@
     </section>
   </main>
 
-  <div style="position:fixed; bottom:0; left:0; right:0; background:#D3D8DE; border-top:1px solid rgba(167,31,56,0.25); padding:8px 16px 6px; text-align:center; z-index:99; font-size:0.85rem; letter-spacing:0.01em; line-height:1.2; font-weight:700; color:#1A2C4E; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
-    &copy; 2026 Anwaltskanzlei Andrea Knebel <span class="fb-d">&nbsp;|&nbsp;</span><br class="fb-m"><a href="https://www.google.com/maps/search/?api=1&amp;query=Zehntwiesenstr.+5+76275+Ettlingen" target="_blank" rel="noopener" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">Zehntwiesenstr. 5 &ndash; D - 76275 Ettlingen</a> <span class="fb-d">&nbsp;|&nbsp;</span><br class="fb-m"><a href="tel:+4972437655590" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">+&nbsp;49&nbsp;&nbsp;72 43 / 76 555 90</a> <span style="color:#1A2C4E; opacity:0.4;">|</span> <a href="mailto:post@ak-ak.com" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">post@ak-ak.com</a> <span class="fb-d">&nbsp;|&nbsp;</span><br class="fb-m"><a href="impressum.html" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">Impressum</a> <span style="color:#1A2C4E; opacity:0.4;">|</span> <a href="datenschutz.html" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">Datenschutz</a> <span style="color:#1A2C4E; opacity:0.4;">|</span> <a href="gesetze.html" style="color:#1A2C4E; padding:2px 0; border-radius:2px;" style-hover="background:#1A2C4E;color:#FFFFFF;">Gesetze</a>
+  <div class="ak-footer-legal" style="position:fixed; bottom:0; left:0; right:0; background:#FFFFFF; border-top:1px solid #EDE0C4; z-index:99;">
+    <div class="ak-foot-row" style="max-width:1140px; margin:0 auto; padding:7px 24px; display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap;">
+      <span class="ak-foot-copy" style="font-size:12px; color:#1A2C4E; white-space:nowrap;">&copy; 2026 Anwaltskanzlei Andrea Knebel</span>
+      <div class="ak-foot-group" style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Zehntwiesenstra&szlig;e+5+76275+Ettlingen" target="_blank" rel="noopener" class="footlink" style="color:#1A2C4E; font-size:12px; letter-spacing:0.01em; white-space:nowrap;">Zehntwiesenstra&szlig;e 5 &middot; D - 76275 Ettlingen</a>
+        <a href="tel:+4972437655590" class="footlink" style="color:#1A2C4E; font-size:12px; letter-spacing:0.01em; white-space:nowrap;">+&nbsp;49&nbsp;&nbsp;72 43 / 76 555 90</a>
+        <a href="mailto:post@ak-ak.com" class="footlink" style="color:#1A2C4E; font-size:12px; letter-spacing:0.01em; white-space:nowrap;">post@ak-ak.com</a>
+      </div>
+      <div class="ak-foot-group ak-foot-legal-links" style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+        <a href="impressum.html" class="footlink" style="color:#1A2C4E; font-size:11px; font-weight:700; letter-spacing:0.14em; margin-right:-0.14em; text-transform:uppercase; white-space:nowrap; border-bottom:2px solid transparent; padding-bottom:1px;">Impressum</a>
+        <a href="datenschutz.html" class="footlink" style="color:#1A2C4E; font-size:11px; font-weight:700; letter-spacing:0.14em; margin-right:-0.14em; text-transform:uppercase; white-space:nowrap; border-bottom:2px solid transparent; padding-bottom:1px;">Datenschutz</a>
+        <a href="gesetze.html" class="footlink" style="color:#1A2C4E; font-size:11px; font-weight:700; letter-spacing:0.14em; margin-right:-0.14em; text-transform:uppercase; white-space:nowrap; border-bottom:2px solid transparent; padding-bottom:1px;">Gesetze</a>
+      </div>
+    </div>
   </div>
 </div>
 
-<script>
-function toggleMobileMenu(){
-  var p = document.getElementById('mobileMenuPanel');
-  if (p) p.style.display = (p.style.display === 'none' || !p.style.display) ? 'block' : 'none';
-}
-function closeMobileMenu(){
-  var p = document.getElementById('mobileMenuPanel');
-  if (p) p.style.display = 'none';
-}
-document.querySelectorAll('[style-hover]').forEach(function(el){
-  var decls = el.getAttribute('style-hover').split(';').filter(Boolean).map(function(d){
-    var i = d.indexOf(':'); return [d.slice(0,i).trim(), d.slice(i+1).trim()];
-  });
-  function camel(s){ return s.replace(/-([a-z])/g, function(_,c){return c.toUpperCase();}); }
-  var orig = {};
-  el.addEventListener('mouseenter', function(){
-    decls.forEach(function(pair){ orig[pair[0]] = el.style[camel(pair[0])]; el.style[camel(pair[0])] = pair[1]; });
-  });
-  el.addEventListener('mouseleave', function(){
-    decls.forEach(function(pair){ el.style[camel(pair[0])] = orig[pair[0]] || ''; });
-  });
-});
-</script>
+
 </body>
 </html>
