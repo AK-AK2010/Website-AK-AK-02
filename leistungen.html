@@ -10,6 +10,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { overflow-wrap: break-word; word-break: break-word; }
   :target, a, h1, h2, h3 { scroll-margin-top: 96px; }
+  html, body { overflow-x: hidden; max-width: 100%; }
   body { font-family: Arial, Helvetica, sans-serif; padding-bottom: var(--ak-foot-h, 38px); }
   a { color: #A71F38; text-decoration: none; }
   a:focus-visible, button:focus-visible { outline: 2px solid #A71F38; outline-offset: 1px; }
@@ -104,6 +105,14 @@
   .ak-sub{font-size:12.5px !important;}
   .ak-meta{font-size:11px !important;}
   .ak-header-pad{padding:22px 0 18px !important;}
+}
+
+@media (max-width: 620px) {
+  main p, main li, main div { max-width: 100% !important; }
+  main [style*="white-space:nowrap"] { white-space: normal !important; }
+  main table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  main img, main svg { max-width: 100%; height: auto; }
+  .ak-foot-legal-links { flex-wrap: wrap !important; }
 }
 </style>
 <script>
