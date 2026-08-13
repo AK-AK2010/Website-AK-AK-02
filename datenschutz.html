@@ -9,6 +9,7 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { overflow-wrap: break-word; word-break: break-word; }
+  :target, a, h1, h2, h3 { scroll-margin-top: 96px; }
   body { font-family: Arial, Helvetica, sans-serif; padding-bottom: var(--ak-foot-h, 38px); }
   a { color: #A71F38; text-decoration: none; }
   a:focus-visible, button:focus-visible { outline: 2px solid #A71F38; outline-offset: 1px; }
@@ -102,10 +103,24 @@
 .ak-rail a::before{height:30px;}
 .ak-nav-desktop nav a:hover, .ak-rail a:hover{color:#1A2C4E;}
 .ak-foot-row{flex-wrap:wrap;}
+
+@media (min-width: 881px) and (max-width: 1080px) {
+  .ak-nav-desktop nav{gap:20px !important;}
+  .ak-nav-desktop nav a{letter-spacing:0.1em !important;}
+  .ak-n1{font-size:32px !important;}
+  .ak-n2{font-size:28px !important;}
+}
+@media (max-width: 380px) {
+  .ak-n1{font-size:23px !important;}
+  .ak-n2{font-size:20px !important;}
+  .ak-sub{font-size:12.5px !important;}
+  .ak-meta{font-size:11px !important;}
+  .ak-header-pad{padding:22px 0 18px !important;}
+}
 </style>
 <script>
-function akToggle(id){var el=document.getElementById(id); if(el) el.classList.toggle('open');}
-function akClose(){var p=document.getElementById('ak-mobile-panel'); if(p) p.classList.remove('open');}
+function akToggle(id){var el=document.getElementById(id); if(!el) return; var open=el.classList.toggle('open'); var b=document.querySelector('[aria-controls="'+id+'"]'); if(b){b.setAttribute('aria-expanded', open?'true':'false'); if(id==='ak-mobile-panel') b.setAttribute('aria-label', open?'Men\u00fc schlie\u00dfen':'Men\u00fc \u00f6ffnen');}}
+function akClose(){var p=document.getElementById('ak-mobile-panel'); if(p) p.classList.remove('open'); var b=document.getElementById('ak-burger'); if(b){b.setAttribute('aria-expanded','false'); b.setAttribute('aria-label','Men\u00fc \u00f6ffnen');}}
 document.addEventListener('DOMContentLoaded',function(){
 
   var foot=document.querySelector('.ak-footer-legal'), lastFoot=null;
@@ -173,17 +188,17 @@ document.addEventListener('DOMContentLoaded',function(){
     </div>
 
     <div class="ak-nav-desktop" style="background:#FFFFFF; border-top:1px solid rgba(26,44,78,0.2); border-bottom:1px solid #EDE0C4; position:relative;">
-      <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; min-height:50px;">
+      <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; min-height:42px;">
         <nav aria-label="Hauptnavigation" style="display:flex;">
         <ul style="display:flex; gap:8px; list-style:none; align-items:center; margin-left:-9px;">
-          <li style="display:flex;"><a href="index.html" aria-label="Startseite" class="hov12" style="display:flex; align-items:center; position:relative; height:44px; padding:0 9px;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 2px;"></span></a></li>
-          <li style="display:flex;"><a href="kanzlei.html" class="hov2" style="display:flex; align-items:center; position:relative; height:44px; padding:0 9px; font-weight:700; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;">Kanzlei</a></li>
-          <li class="navlink" style="display:flex;"><a id="nl-l" href="leistungen.html" class="hov3" style="display:flex; align-items:center; position:relative; height:44px; padding:0 9px; font-weight:700; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;">Leistungen<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:1em; height:1em; display:inline-block; flex:none; font-size:11px; color:#1A2C4E; margin-left:8px; line-height:1; display:block;" aria-hidden="true"><path d="M17 9.3a1 1 0 0 1 .7 1.7l-5 5a1 1 0 0 1 -1.4 0l-5 -5a1 1 0 0 1 .7 -1.7z"/></svg></a>
+          <li style="display:flex;"><a href="index.html" aria-label="Startseite" class="hov12" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 2px;"></span></a></li>
+          <li style="display:flex;"><a href="kanzlei.html" class="hov2" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Kanzlei</a></li>
+          <li class="navlink" style="display:flex;"><a id="nl-l" href="leistungen.html" class="hov3" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Leistungen<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:1em; height:1em; display:inline-block; flex:none; font-size:11px; color:#1A2C4E; margin-left:8px; line-height:1; display:block;" aria-hidden="true"><path d="M17 9.3a1 1 0 0 1 .7 1.7l-5 5a1 1 0 0 1 -1.4 0l-5 -5a1 1 0 0 1 .7 -1.7z"/></svg></a>
           </li>
-          <li style="display:flex;"><a href="vita.html" class="hov7" style="display:flex; align-items:center; position:relative; height:44px; padding:0 9px; font-weight:700; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;">Vita</a></li>
-          <li class="navlink" style="display:flex;"><a id="nl-f" href="fachanwalt.html" class="hov8" style="display:flex; align-items:center; position:relative; height:44px; padding:0 9px; font-weight:700; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;">Fachanwalt<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:1em; height:1em; display:inline-block; flex:none; font-size:11px; color:#1A2C4E; margin-left:8px; line-height:1; display:block;" aria-hidden="true"><path d="M17 9.3a1 1 0 0 1 .7 1.7l-5 5a1 1 0 0 1 -1.4 0l-5 -5a1 1 0 0 1 .7 -1.7z"/></svg></a>
+          <li style="display:flex;"><a href="vita.html" class="hov7" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Vita</a></li>
+          <li class="navlink" style="display:flex;"><a id="nl-f" href="fachanwalt.html" class="hov8" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Fachanwalt<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:1em; height:1em; display:inline-block; flex:none; font-size:11px; color:#1A2C4E; margin-left:8px; line-height:1; display:block;" aria-hidden="true"><path d="M17 9.3a1 1 0 0 1 .7 1.7l-5 5a1 1 0 0 1 -1.4 0l-5 -5a1 1 0 0 1 .7 -1.7z"/></svg></a>
           </li>
-          <li style="display:flex;"><a href="kosten.html" class="hov11" style="display:flex; align-items:center; position:relative; height:44px; padding:0 9px; font-weight:700; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;">Kosten</a></li>
+          <li style="display:flex;"><a href="kosten.html" class="hov11" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Kosten</a></li>
         </ul>
         </nav>
         <div style="display:flex; align-items:center; flex:0 0 auto;">
@@ -212,7 +227,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <a href="index.html" aria-label="Startseite" style="display:flex; align-items:center; padding:16px 0; color:#1A2C4E;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 4px;"></span></a>
       <div style="display:flex; align-items:center; gap:14px; flex:0 0 auto;">
         <a href="kontakt.html" class="hov13" style="display:block; font-weight:700; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; padding:7px 12px; white-space:nowrap;">Kontakt</a>
-        <button type="button" onclick="akToggle('ak-mobile-panel')" aria-label="Men&uuml; &ouml;ffnen" style="background:none; border:none; padding:16px 0 16px 4px; cursor:pointer; display:flex; align-items:center;">
+        <button type="button" onclick="akToggle('ak-mobile-panel')" id="ak-burger" aria-expanded="false" aria-controls="ak-mobile-panel" aria-label="Men&uuml; &ouml;ffnen" style="background:none; border:none; padding:16px 0 16px 4px; cursor:pointer; display:flex; align-items:center;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:26px; color:#1A2C4E;" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
         </button>
       </div>
@@ -222,7 +237,7 @@ document.addEventListener('DOMContentLoaded',function(){
         <li style="border-top:1px solid #EDE0C4;"><a href="index.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid #A71F38;">Startseite</a></li>
         <li style="border-top:1px solid #EDE0C4;"><a href="kanzlei.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Kanzlei</a></li>
         <li style="border-top:1px solid #EDE0C4;">
-          <button type="button" onclick="akToggle('ak-sub-l')" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
+          <button type="button" onclick="akToggle('ak-sub-l')" aria-expanded="true" aria-controls="ak-sub-l" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
             <span>Leistungen</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:16px;" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
           </button>
           <div id="ak-sub-l" class="ak-sub-panel">
@@ -234,7 +249,7 @@ document.addEventListener('DOMContentLoaded',function(){
         </li>
         <li style="border-top:1px solid #EDE0C4;"><a href="vita.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Vita</a></li>
         <li style="border-top:1px solid #EDE0C4;">
-          <button type="button" onclick="akToggle('ak-sub-f')" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
+          <button type="button" onclick="akToggle('ak-sub-f')" aria-expanded="false" aria-controls="ak-sub-f" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
             <span>Fachanwalt</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:16px;" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
           </button>
           <div id="ak-sub-f" class="ak-sub-panel">
