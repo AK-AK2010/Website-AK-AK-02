@@ -103,6 +103,8 @@
 .ak-rail a::before{height:30px;}
 .ak-nav-desktop nav a:hover, .ak-rail a:hover{color:#1A2C4E;}
 .ak-nav-desktop nav a:hover::before, .ak-rail a:hover::before{background:rgba(237,224,196,0.2);}
+.ak-nav-desktop nav a[aria-current]:hover::before, .ak-rail a[aria-current]:hover::before{background:transparent;}
+.ak-nav-desktop nav a.ak-cur:hover::before{background:transparent;}
 .ak-foot-row{flex-wrap:wrap;}
 
 @media (min-width: 881px) and (max-width: 1080px) {

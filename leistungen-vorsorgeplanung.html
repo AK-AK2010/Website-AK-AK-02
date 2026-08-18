@@ -40,6 +40,9 @@
 .hov12{color:#1A2C4E;}
 .hov15{background:transparent;color:#1A2C4E;border:2px solid #A71F38;}
 .hov13{background:transparent;color:#1A2C4E;border:2px solid #A71F38;}
+.hov16{position:relative; color:#1A2C4E;}
+.hov16::before{content:''; position:absolute; left:0; right:0; top:50%; transform:translateY(-50%); height:34px; border:1px solid #A71F38; box-sizing:border-box;}
+.hov16 > span{position:relative;}
 .hov14{background:transparent;color:#1A2C4E;}
 @media (hover: hover) and (pointer: fine) {
 .hov1:hover{text-decoration:underline;}
@@ -56,6 +59,8 @@
 .hov12:hover::before{border-color:#EDE0C4;}
 .hov15:hover{background:#A71F38;color:#FFFFFF;border-color:#A71F38;}
 .hov13:hover{background:#A71F38;color:#FFFFFF;border-color:#A71F38;}
+.hov16:hover{color:#FFFFFF;}
+.hov16:hover::before{background:#A71F38;}
 .hov14:hover{color:#A71F38;border-color:#A71F38;}
 }
 </style>
@@ -97,6 +102,9 @@
 .ak-nav-desktop nav a::before, .ak-rail a::before{content:''; position:absolute; left:0; right:0; top:50%; transform:translateY(-50%); height:34px; border:2px solid transparent; box-sizing:border-box; pointer-events:none;}
 .ak-rail a::before{height:30px;}
 .ak-nav-desktop nav a:hover, .ak-rail a:hover{color:#1A2C4E;}
+.ak-nav-desktop nav a:hover::before, .ak-rail a:hover::before{background:rgba(237,224,196,0.2);}
+.ak-nav-desktop nav a[aria-current]:hover::before, .ak-rail a[aria-current]:hover::before{background:transparent;}
+.ak-nav-desktop nav a.ak-cur:hover::before{background:transparent;}
 .ak-foot-row{flex-wrap:wrap;}
 
 @media (min-width: 881px) and (max-width: 1080px) {
@@ -196,7 +204,7 @@ document.addEventListener('DOMContentLoaded',function(){
         <ul style="display:flex; gap:8px; list-style:none; align-items:center; margin-left:-9px;">
           <li style="display:flex;"><a href="index.html" aria-label="Startseite" class="hov12" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 2px;"></span></a></li>
           <li style="display:flex;"><a href="kanzlei.html" class="hov2" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Kanzlei</a></li>
-          <li class="navlink" style="display:flex;"><a id="nl-l" href="leistungen.html" style="color:#A71F38; display:flex; align-items:center; position:relative; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Leistungen<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:1em; height:1em; display:inline-block; flex:none; font-size:11px; color:#1A2C4E; margin-left:8px; line-height:1; display:block;" aria-hidden="true"><path d="M17 9.3a1 1 0 0 1 .7 1.7l-5 5a1 1 0 0 1 -1.4 0l-5 -5a1 1 0 0 1 .7 -1.7z"/></svg></a>
+          <li class="navlink" style="display:flex;"><a id="nl-l" class="ak-cur" href="leistungen.html" style="color:#A71F38; display:flex; align-items:center; position:relative; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Leistungen<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:1em; height:1em; display:inline-block; flex:none; font-size:11px; color:#1A2C4E; margin-left:8px; line-height:1; display:block;" aria-hidden="true"><path d="M17 9.3a1 1 0 0 1 .7 1.7l-5 5a1 1 0 0 1 -1.4 0l-5 -5a1 1 0 0 1 .7 -1.7z"/></svg></a>
           </li>
           <li style="display:flex;"><a href="vita.html" class="hov7" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Vita</a></li>
           <li class="navlink" style="display:flex;"><a id="nl-f" href="fachanwalt.html" class="hov8" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Fachanwalt<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:1em; height:1em; display:inline-block; flex:none; font-size:11px; color:#1A2C4E; margin-left:8px; line-height:1; display:block;" aria-hidden="true"><path d="M17 9.3a1 1 0 0 1 .7 1.7l-5 5a1 1 0 0 1 -1.4 0l-5 -5a1 1 0 0 1 .7 -1.7z"/></svg></a>
@@ -205,7 +213,7 @@ document.addEventListener('DOMContentLoaded',function(){
         </ul>
         </nav>
         <div style="display:flex; align-items:center; flex:0 0 auto;">
-          <a href="kontakt.html" class="hov13" style="display:block; font-weight:700; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; padding:7px 15px; white-space:nowrap;">Kontakt</a>
+          <a href="kontakt.html" class="hov16" style="display:flex; align-items:center; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase; white-space:nowrap;"><span>Kontakt</span></a>
         </div>
       </div>
       <div id="rail-l" class="ak-rail" style="position:absolute; top:100%; left:0; right:0; background:#FFFFFF; border-top:1px solid #EDE0C4; border-bottom:1px solid #EDE0C4; box-shadow:0 12px 26px rgba(26,44,78,0.10); z-index:200;">
