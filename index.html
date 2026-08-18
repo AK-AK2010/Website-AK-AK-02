@@ -171,6 +171,14 @@
   .ak-footer-legal { position: static !important; border-top: 1px solid #EDE0C4 !important; }
   .ak-foot-row { flex-direction: column !important; align-items: flex-start !important; gap: 3px !important; }
   header { position: static !important; }
+  header { box-shadow: none !important; }
+  .ak-header-pad { padding: 0 0 10px !important; text-align: left !important; }
+  .ak-header-pad > div { padding: 0 !important; }
+  .ak-header-eyebrow-logo { height: 13px !important; margin: 0 0 6px !important; }
+  .ak-sub, .ak-meta { display: none !important; }
+  .ak-wordmark { letter-spacing: 0.04em !important; }
+  .ak-n1 { font-size: 15pt !important; }
+  .ak-n2 { font-size: 13pt !important; }
   main { max-width: none !important; }
   a { color: #1A2C4E !important; text-decoration: none !important; }
   h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
@@ -251,7 +259,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; min-height:42px;">
         <nav aria-label="Hauptnavigation" style="display:flex;">
         <ul style="display:flex; gap:8px; list-style:none; align-items:center; margin-left:-9px;">
-          <li style="display:flex;"><a href="index.html" aria-current="page" aria-label="Startseite" class="hov12" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; color:#A71F38;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 2px;"></span></a></li>
+          <li style="display:flex;"><a href="index.html" aria-current="page" aria-label="Startseite" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; color:#A71F38;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 2px;"></span></a></li>
           <li style="display:flex;"><a href="kanzlei.html" class="hov2" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Kanzlei</a></li>
           <li class="navlink" style="display:flex;"><a id="nl-l" href="leistungen.html" class="hov3" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Leistungen<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:1em; height:1em; display:inline-block; flex:none; font-size:11px; color:#1A2C4E; margin-left:8px; line-height:1; display:block;" aria-hidden="true"><path d="M17 9.3a1 1 0 0 1 .7 1.7l-5 5a1 1 0 0 1 -1.4 0l-5 -5a1 1 0 0 1 .7 -1.7z"/></svg></a>
           </li>
