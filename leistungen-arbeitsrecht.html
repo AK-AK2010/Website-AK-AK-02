@@ -128,6 +128,21 @@
   main img, main svg { max-width: 100%; height: auto; }
   .ak-foot-legal-links { flex-wrap: wrap !important; }
 }
+
+@media print {
+  @page { margin: 18mm 16mm; }
+  html, body { background: #FFFFFF !important; }
+  body { padding-bottom: 0 !important; font-size: 11pt; }
+  .skip-link, .ak-nav-desktop, .ak-rail, .ak-nav-mobile, .ak-mobile-panel, .ak-sub-panel, #ak-burger { display: none !important; }
+  .ak-footer-legal { position: static !important; border-top: 1px solid #EDE0C4 !important; }
+  .ak-foot-row { flex-direction: column !important; align-items: flex-start !important; gap: 3px !important; }
+  header { position: static !important; }
+  main { max-width: none !important; }
+  a { color: #1A2C4E !important; text-decoration: none !important; }
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  p, li, tr { break-inside: avoid; page-break-inside: avoid; }
+  .imp-section, .ds-section, .gesetze-col { break-inside: avoid; page-break-inside: avoid; }
+}
 </style>
 <script>
 function akToggle(id){var el=document.getElementById(id); if(!el) return; var open=el.classList.toggle('open'); var b=document.querySelector('[aria-controls="'+id+'"]'); if(b){b.setAttribute('aria-expanded', open?'true':'false'); if(id==='ak-mobile-panel') b.setAttribute('aria-label', open?'Men\u00fc schlie\u00dfen':'Men\u00fc \u00f6ffnen');}}
@@ -287,9 +302,9 @@ document.addEventListener('DOMContentLoaded',function(){
             <span style="font-weight:700; color:#A71F38;">Arbeitsrecht</span>
           </h2>
 
-          <p style="font-size:0.95rem; color:#1A2C4E; line-height:1.75; margin-bottom:16px; text-align:justify;">Auf dem Gebiet des <strong style="color:#A71F38;">Arbeitsrechts</strong> finden Sie bei mir Rat, Unterst&uuml;tzung und Vertretung beispielsweise bei folgenden Problemstellungen:</p>
+          <p style="font-size:0.95rem; color:#1A2C4E; line-height:1.75; margin-bottom:16px; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">Auf dem Gebiet des <strong style="color:#A71F38;">Arbeitsrechts</strong> finden Sie bei mir Rat, Unterst&uuml;tzung und Vertretung beispielsweise bei folgenden Problemstellungen:</p>
 
-          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0 0 40px 0; text-align:justify;">
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0 0 40px 0; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">
             <li>K&uuml;ndigungsrechtsstreite (ordentliche und au&szlig;erordentliche K&uuml;ndigung; verhaltensbedingte, personenbedingte oder betriebsbedingte K&uuml;ndigung; Beendigungs- und &Auml;nderungsk&uuml;ndigung; mit und ohne K&uuml;ndigungsschutz nach dem KSchG; besonderer K&uuml;ndigungsschutz)</li>
             <li>Gestaltung / &Uuml;berpr&uuml;fung von Arbeitsvertr&auml;gen (unbefristete oder befristete) oder sonstigen arbeitsrechtlichen Vertr&auml;gen und Vereinbarungen (auch Aufhebungs- und Abwicklungsvertr&auml;ge)</li>
             <li>&Auml;nderung von Arbeitsbedingungen</li>
@@ -310,9 +325,9 @@ document.addEventListener('DOMContentLoaded',function(){
 
           <div style="border-top:1px solid rgba(26,44,78,0.2); margin-bottom:40px;"></div>
 
-          <p style="font-size:0.95rem; color:#1A2C4E; line-height:1.75; margin-bottom:16px; text-align:justify;">Meine Dienstleistungen f&uuml;r Sie im <strong style="color:#A71F38;">Arbeitsrecht:</strong></p>
+          <p style="font-size:0.95rem; color:#1A2C4E; line-height:1.75; margin-bottom:16px; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">Meine Dienstleistungen f&uuml;r Sie im <strong style="color:#A71F38;">Arbeitsrecht:</strong></p>
 
-          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify;">
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">
             <li>Au&szlig;ergerichtliche Beratung und Vertretung</li>
             <li>Gerichtliche Vertretung (Urteilsverfahren &ndash; Beschlussverfahren / Hauptsacheverfahren &ndash; Einstweiliger Rechtsschutz / Rechtsmittelverfahren)</li>
             <li>Vertretung vor Schlichtungsstellen (Einigungsstelle, Berufsausbildungsverh&auml;ltnisse, Kirchen)</li>
@@ -336,9 +351,9 @@ document.addEventListener('DOMContentLoaded',function(){
         <a href="datenschutz.html" class="footlink" style="color:#1A2C4E; font-size:11px; font-weight:700; letter-spacing:0.14em; margin-right:-0.14em; text-transform:uppercase; white-space:nowrap; border-bottom:2px solid transparent; padding-bottom:1px;">Datenschutz</a>
         <a href="gesetze.html" class="footlink" style="color:#1A2C4E; font-size:11px; font-weight:700; letter-spacing:0.14em; margin-right:-0.14em; text-transform:uppercase; white-space:nowrap; border-bottom:2px solid transparent; padding-bottom:1px;">Gesetze</a>
       </div>
+    </div>
     </footer>
   </div>
-</div>
 
 
 </body>

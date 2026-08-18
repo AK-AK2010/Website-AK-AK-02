@@ -133,6 +133,21 @@
   main img, main svg { max-width: 100%; height: auto; }
   .ak-foot-legal-links { flex-wrap: wrap !important; }
 }
+
+@media print {
+  @page { margin: 18mm 16mm; }
+  html, body { background: #FFFFFF !important; }
+  body { padding-bottom: 0 !important; font-size: 11pt; }
+  .skip-link, .ak-nav-desktop, .ak-rail, .ak-nav-mobile, .ak-mobile-panel, .ak-sub-panel, #ak-burger { display: none !important; }
+  .ak-footer-legal { position: static !important; border-top: 1px solid #EDE0C4 !important; }
+  .ak-foot-row { flex-direction: column !important; align-items: flex-start !important; gap: 3px !important; }
+  header { position: static !important; }
+  main { max-width: none !important; }
+  a { color: #1A2C4E !important; text-decoration: none !important; }
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  p, li, tr { break-inside: avoid; page-break-inside: avoid; }
+  .imp-section, .ds-section, .gesetze-col { break-inside: avoid; page-break-inside: avoid; }
+}
 </style>
 <script>
 function akToggle(id){var el=document.getElementById(id); if(!el) return; var open=el.classList.toggle('open'); var b=document.querySelector('[aria-controls="'+id+'"]'); if(b){b.setAttribute('aria-expanded', open?'true':'false'); if(id==='ak-mobile-panel') b.setAttribute('aria-label', open?'Men\u00fc schlie\u00dfen':'Men\u00fc \u00f6ffnen');}}
@@ -299,22 +314,25 @@ document.addEventListener('DOMContentLoaded',function(){
               <li><strong>Allgemeines Gleichbehandlungsgesetz (AGG)</strong></li>
               <li><strong>Altersteilzeitgesetz (AltTZG)</strong></li>
               <li><strong>Arbeitnehmer-Entsendegesetz (AEntG)</strong></li>
+              <li><strong>Arbeitsgerichtsgesetz (ArbGG)</strong></li>
+              <li><strong>Arbeitsschutzgesetz (ArbSchG)</strong></li>
+              <li><strong>Arbeitszeitgesetz (ArbZG)</strong></li>
+              <li><strong>Betriebsverfassungsgesetz (BetrVG)</strong></li>
               <li><strong>B&uuml;rgerliches Gesetzbuch (BGB)</strong></li>
               <li><strong>Bundesdatenschutzgesetz (BDSG)</strong></li>
               <li><strong>Bundeselterngeld- und Elternzeitgesetz (BEEG)</strong></li>
               <li><strong>Bundesurlaubsgesetz (BUrlG)</strong></li>
               <li><strong>Einkommensteuergesetz (EStG)</strong></li>
               <li><strong>Entgeltfortzahlungsgesetz (EFZG)</strong></li>
+              <li><strong>Entgelttransparenzgesetz (EntgTranspG)</strong></li>
               <li><strong>Familienpflegezeitgesetz (FPfZG)</strong></li>
               <li><strong>Gewerbeordnung (GewO)</strong></li>
               <li><strong>Grundgesetz (GG)</strong></li>
               <li><strong>Handelsgesetzbuch (HGB)</strong></li>
-              <li><strong>Heimarbeitsgesetz (HAG)</strong></li>
-              <li><strong>Insolvenzordnung (InsO)</strong></li>
+                            <li><strong>Insolvenzordnung (InsO)</strong></li>
               <li><strong>Jugendarbeitsschutzgesetz (JArbSchG)</strong></li>
               <li><strong>K&uuml;ndigungsschutzgesetz (KSchG)</strong></li>
-              <li><strong>Mindestarbeitsbedingungengesetz (MiArbG)</strong></li>
-              <li><strong>Mindestlohngesetz (MiLoG)</strong></li>
+                            <li><strong>Mindestlohngesetz (MiLoG)</strong></li>
               <li><strong>Mitbestimmungsgesetz (MitbestG)</strong></li>
               <li><strong>Mutterschutzgesetz (MuSchG)</strong></li>
               <li><strong>Nachweisgesetz (NachwG)</strong></li>
@@ -361,9 +379,9 @@ document.addEventListener('DOMContentLoaded',function(){
         <a href="datenschutz.html" class="footlink" style="color:#1A2C4E; font-size:11px; font-weight:700; letter-spacing:0.14em; margin-right:-0.14em; text-transform:uppercase; white-space:nowrap; border-bottom:2px solid transparent; padding-bottom:1px;">Datenschutz</a>
         <a href="gesetze.html" aria-current="page" class="footlink" style="color:#A71F38; font-size:11px; font-weight:700; letter-spacing:0.14em; margin-right:-0.14em; text-transform:uppercase; white-space:nowrap; border-bottom:2px solid transparent; padding-bottom:1px;">Gesetze</a>
       </div>
+    </div>
     </footer>
   </div>
-</div>
 
 
 </body>

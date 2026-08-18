@@ -45,6 +45,7 @@
 @media (hover: hover) and (pointer: fine) {
 .hov1:hover{text-decoration:underline;}
 .hov2:hover::before{border-color:#EDE0C4;}
+.hov12:hover::before{border-color:#EDE0C4;}
 .hov3:hover::before{border-color:#EDE0C4;}
 .hov4:hover::before{border-color:#EDE0C4;}
 .hov5:hover::before{border-color:#EDE0C4;}
@@ -123,6 +124,21 @@
   main img, main svg { max-width: 100%; height: auto; }
   .ak-foot-legal-links { flex-wrap: wrap !important; }
 }
+
+@media print {
+  @page { margin: 18mm 16mm; }
+  html, body { background: #FFFFFF !important; }
+  body { padding-bottom: 0 !important; font-size: 11pt; }
+  .skip-link, .ak-nav-desktop, .ak-rail, .ak-nav-mobile, .ak-mobile-panel, .ak-sub-panel, #ak-burger { display: none !important; }
+  .ak-footer-legal { position: static !important; border-top: 1px solid #EDE0C4 !important; }
+  .ak-foot-row { flex-direction: column !important; align-items: flex-start !important; gap: 3px !important; }
+  header { position: static !important; }
+  main { max-width: none !important; }
+  a { color: #1A2C4E !important; text-decoration: none !important; }
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  p, li, tr { break-inside: avoid; page-break-inside: avoid; }
+  .imp-section, .ds-section, .gesetze-col { break-inside: avoid; page-break-inside: avoid; }
+}
 </style>
 <script>
 function akToggle(id){var el=document.getElementById(id); if(!el) return; var open=el.classList.toggle('open'); var b=document.querySelector('[aria-controls="'+id+'"]'); if(b){b.setAttribute('aria-expanded', open?'true':'false'); if(id==='ak-mobile-panel') b.setAttribute('aria-label', open?'Men\u00fc schlie\u00dfen':'Men\u00fc \u00f6ffnen');}}
@@ -197,7 +213,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div style="max-width:1140px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; min-height:42px;">
         <nav aria-label="Hauptnavigation" style="display:flex;">
         <ul style="display:flex; gap:8px; list-style:none; align-items:center; margin-left:-9px;">
-          <li style="display:flex;"><a href="index.html" aria-label="Startseite" class="hov2" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 2px;"></span></a></li>
+          <li style="display:flex;"><a href="index.html" aria-label="Startseite" class="hov12" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 2px;"></span></a></li>
           <li style="display:flex;"><a href="kanzlei.html" class="hov3" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Kanzlei</a></li>
           <li class="navlink" style="display:flex;"><a id="nl-l" aria-current="page" href="leistungen.html" style="display:flex; align-items:center; position:relative; height:38px; padding:0 9px; color:#A71F38; font-weight:700; font-size:14px; letter-spacing:0.13em; text-transform:uppercase;">Leistungen<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:1em; height:1em; display:inline-block; flex:none; font-size:11px; color:#A71F38; margin-left:8px; line-height:1; display:block;" aria-hidden="true"><path d="M17 9.3a1 1 0 0 1 .7 1.7l-5 5a1 1 0 0 1 -1.4 0l-5 -5a1 1 0 0 1 .7 -1.7z"/></svg></a>
           </li>
@@ -385,11 +401,9 @@ document.addEventListener('DOMContentLoaded',function(){
         <a href="datenschutz.html" class="footlink" style="color:#1A2C4E; font-size:11px; font-weight:700; letter-spacing:0.14em; margin-right:-0.14em; text-transform:uppercase; white-space:nowrap; border-bottom:2px solid transparent; padding-bottom:1px;">Datenschutz</a>
         <a href="gesetze.html" class="footlink" style="color:#1A2C4E; font-size:11px; font-weight:700; letter-spacing:0.14em; margin-right:-0.14em; text-transform:uppercase; white-space:nowrap; border-bottom:2px solid transparent; padding-bottom:1px;">Gesetze</a>
       </div>
+    </div>
     </footer>
   </div>
-  </div>
-  </div>
-</div>
 
 
 </body>

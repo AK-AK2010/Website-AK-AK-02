@@ -134,6 +134,21 @@
   main img, main svg { max-width: 100%; height: auto; }
   .ak-foot-legal-links { flex-wrap: wrap !important; }
 }
+
+@media print {
+  @page { margin: 18mm 16mm; }
+  html, body { background: #FFFFFF !important; }
+  body { padding-bottom: 0 !important; font-size: 11pt; }
+  .skip-link, .ak-nav-desktop, .ak-rail, .ak-nav-mobile, .ak-mobile-panel, .ak-sub-panel, #ak-burger { display: none !important; }
+  .ak-footer-legal { position: static !important; border-top: 1px solid #EDE0C4 !important; }
+  .ak-foot-row { flex-direction: column !important; align-items: flex-start !important; gap: 3px !important; }
+  header { position: static !important; }
+  main { max-width: none !important; }
+  a { color: #1A2C4E !important; text-decoration: none !important; }
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  p, li, tr { break-inside: avoid; page-break-inside: avoid; }
+  .imp-section, .ds-section, .gesetze-col { break-inside: avoid; page-break-inside: avoid; }
+}
 </style>
 <script>
 function akToggle(id){var el=document.getElementById(id); if(!el) return; var open=el.classList.toggle('open'); var b=document.querySelector('[aria-controls="'+id+'"]'); if(b){b.setAttribute('aria-expanded', open?'true':'false'); if(id==='ak-mobile-panel') b.setAttribute('aria-label', open?'Men\u00fc schlie\u00dfen':'Men\u00fc \u00f6ffnen');}}
@@ -387,9 +402,9 @@ document.addEventListener('DOMContentLoaded',function(){
         <a href="datenschutz.html" class="footlink" style="color:#1A2C4E; font-size:11px; font-weight:700; letter-spacing:0.14em; margin-right:-0.14em; text-transform:uppercase; white-space:nowrap; border-bottom:2px solid transparent; padding-bottom:1px;">Datenschutz</a>
         <a href="gesetze.html" class="footlink" style="color:#1A2C4E; font-size:11px; font-weight:700; letter-spacing:0.14em; margin-right:-0.14em; text-transform:uppercase; white-space:nowrap; border-bottom:2px solid transparent; padding-bottom:1px;">Gesetze</a>
       </div>
+    </div>
     </footer>
   </div>
-</div>
 
 
 </body>

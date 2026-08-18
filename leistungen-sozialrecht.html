@@ -128,6 +128,21 @@
   main img, main svg { max-width: 100%; height: auto; }
   .ak-foot-legal-links { flex-wrap: wrap !important; }
 }
+
+@media print {
+  @page { margin: 18mm 16mm; }
+  html, body { background: #FFFFFF !important; }
+  body { padding-bottom: 0 !important; font-size: 11pt; }
+  .skip-link, .ak-nav-desktop, .ak-rail, .ak-nav-mobile, .ak-mobile-panel, .ak-sub-panel, #ak-burger { display: none !important; }
+  .ak-footer-legal { position: static !important; border-top: 1px solid #EDE0C4 !important; }
+  .ak-foot-row { flex-direction: column !important; align-items: flex-start !important; gap: 3px !important; }
+  header { position: static !important; }
+  main { max-width: none !important; }
+  a { color: #1A2C4E !important; text-decoration: none !important; }
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  p, li, tr { break-inside: avoid; page-break-inside: avoid; }
+  .imp-section, .ds-section, .gesetze-col { break-inside: avoid; page-break-inside: avoid; }
+}
 </style>
 <script>
 function akToggle(id){var el=document.getElementById(id); if(!el) return; var open=el.classList.toggle('open'); var b=document.querySelector('[aria-controls="'+id+'"]'); if(b){b.setAttribute('aria-expanded', open?'true':'false'); if(id==='ak-mobile-panel') b.setAttribute('aria-label', open?'Men\u00fc schlie\u00dfen':'Men\u00fc \u00f6ffnen');}}
@@ -302,7 +317,7 @@ document.addEventListener('DOMContentLoaded',function(){
           <p style="font-size:0.95rem; color:#1A2C4E; line-height:1.75; text-align:justify; hyphens:auto; -webkit-hyphens:auto; hyphenate-limit-chars:6 3 3; margin-bottom:20px;">In folgenden <span style="font-weight:700;">ausgew&auml;hlten</span> Teilbereichen des <strong style="color:#A71F38;">Sozialrechts</strong> bin ich gerne f&uuml;r Sie t&auml;tig:</p>
 
           <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:0 0 10px 0;">SGB IV &ndash; Gemeinsame Vorschriften</h3>
-          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify;">
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">
             <li>Scheinselbst&auml;ndigkeit</li>
             <li>Statusfeststellungsverfahren / Anfrageverfahren (Einzugsstelle, Rentenversicherung / Familienangeh&ouml;rige, GmbH-Gesch&auml;ftsf&uuml;hrer)</li>
             <li>Betriebspr&uuml;fung / Beitrags(nach)forderung / S&auml;umniszuschl&auml;ge / Verj&auml;hrung / Haftung (Arbeitgeber / Gesch&auml;ftsf&uuml;hrer) / Stundung / Ratenzahlung</li>
@@ -324,7 +339,7 @@ document.addEventListener('DOMContentLoaded',function(){
           </ul>
 
           <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB V &ndash; Gesetzliche Krankenversicherung</h3>
-          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify;">
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">
             <li>Versicherungspflicht, Versicherungsfreiheit, Befreiung von der Versicherungspflicht</li>
             <li>Wechsel / R&uuml;ckkehr von privater Krankenversicherung zu gesetzlicher Krankenversicherung</li>
             <li>Kostenerstattung</li>
@@ -335,7 +350,7 @@ document.addEventListener('DOMContentLoaded',function(){
           </ul>
 
           <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB VI &ndash; Gesetzliche Rentenversicherung</h3>
-          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify;">
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">
             <li>Versicherungspflicht (Besch&auml;ftigte, selbst&auml;ndig T&auml;tige, sonstige Versicherte, auf Antrag)</li>
             <li>Versicherungsfreiheit / Befreiung von der Versicherungspflicht / freiwillige Versicherung</li>
             <li>Medizinische Rehabilitation / Kinderrehabilitation / Teilhabe am Arbeitsleben</li>
@@ -347,7 +362,7 @@ document.addEventListener('DOMContentLoaded',function(){
           </ul>
 
           <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB VII &ndash; Gesetzliche Unfallversicherung</h3>
-          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify;">
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">
             <li>Versicherung kraft Gesetzes / Satzung / Versicherungsfreiheit / freiwillige Versicherung</li>
             <li>Arbeitsunfall / Berufskrankheit</li>
             <li>Heilbehandlung / Teilhabe am Arbeitsleben</li>
@@ -363,7 +378,7 @@ document.addEventListener('DOMContentLoaded',function(){
           </ul>
 
           <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGG &ndash; Sozialgerichtsgesetz</h3>
-          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify;">
+          <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">
             <li>Sozialgerichtsverfahren: Sozialgerichte / Landessozialgerichte / Bundessozialgericht</li>
             <li>Anfechtungsklage / Leistungsklage / Verpflichtungsklage / Feststellungsklage / Unt&auml;tigkeitsklage / Fortsetzungsfeststellungsklage / Nichtigkeitsklage</li>
             <li>Vorl&auml;ufiger Rechtsschutz / Eilverfahren</li>
@@ -397,9 +412,9 @@ document.addEventListener('DOMContentLoaded',function(){
         <a href="datenschutz.html" class="footlink" style="color:#1A2C4E; font-size:11px; font-weight:700; letter-spacing:0.14em; margin-right:-0.14em; text-transform:uppercase; white-space:nowrap; border-bottom:2px solid transparent; padding-bottom:1px;">Datenschutz</a>
         <a href="gesetze.html" class="footlink" style="color:#1A2C4E; font-size:11px; font-weight:700; letter-spacing:0.14em; margin-right:-0.14em; text-transform:uppercase; white-space:nowrap; border-bottom:2px solid transparent; padding-bottom:1px;">Gesetze</a>
       </div>
+    </div>
     </footer>
   </div>
-</div>
 
 
 </body>
