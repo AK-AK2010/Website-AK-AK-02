@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <a href="index.html" aria-label="Startseite" style="display:flex; align-items:center; padding:16px 0; color:#1A2C4E;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 4px;"></span></a>
       <div style="display:flex; align-items:center; gap:14px; flex:0 0 auto;">
         <a href="kontakt.html" class="hov13" style="display:block; font-weight:700; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; padding:7px 12px; white-space:nowrap;">Kontakt</a>
-        <button type="button" onclick="akToggle('ak-mobile-panel')" id="ak-burger" aria-expanded="false" aria-controls="ak-mobile-panel" aria-label="Men&uuml; &ouml;ffnen" style="background:none; border:none; padding:16px 0 16px 4px; cursor:pointer; display:flex; align-items:center;">
+        <button type="button" onclick="akToggle('ak-mobile-panel')" id="ak-burger" aria-expanded="false" aria-controls="ak-mobile-panel" aria-label="Men&uuml; &ouml;ffnen" style="font-family:inherit; background:none; border:none; padding:16px 0 16px 4px; cursor:pointer; display:flex; align-items:center;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:26px; color:#1A2C4E;" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
         </button>
       </div>
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded',function(){
         <li style="border-top:1px solid #EDE0C4;"><a href="index.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid #A71F38;">Startseite</a></li>
         <li style="border-top:1px solid #EDE0C4;"><a href="kanzlei.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Kanzlei</a></li>
         <li style="border-top:1px solid #EDE0C4;">
-          <button type="button" onclick="akToggle('ak-sub-l')" aria-expanded="true" aria-controls="ak-sub-l" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
+          <button type="button" onclick="akToggle('ak-sub-l')" aria-expanded="true" aria-controls="ak-sub-l" style="font-family:inherit; display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
             <span>Leistungen</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:16px;" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
           </button>
           <div id="ak-sub-l" class="ak-sub-panel">
@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded',function(){
         </li>
         <li style="border-top:1px solid #EDE0C4;"><a href="vita.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Vita</a></li>
         <li style="border-top:1px solid #EDE0C4;">
-          <button type="button" onclick="akToggle('ak-sub-f')" aria-expanded="false" aria-controls="ak-sub-f" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
+          <button type="button" onclick="akToggle('ak-sub-f')" aria-expanded="false" aria-controls="ak-sub-f" style="font-family:inherit; display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
             <span>Fachanwalt</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:16px;" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
           </button>
           <div id="ak-sub-f" class="ak-sub-panel">
@@ -338,9 +338,9 @@ document.addEventListener('DOMContentLoaded',function(){
             </ul>
           </div>
 
-          <p style="font-size:0.95rem; color:#1A2C4E; line-height:1.75; text-align:justify; hyphens:auto; -webkit-hyphens:auto; hyphenate-limit-chars:6 3 3; margin-bottom:20px;">In folgenden <span style="font-weight:700;">ausgew&auml;hlten</span> Teilbereichen des <strong style="color:#A71F38;">Sozialrechts</strong> bin ich gerne f&uuml;r Sie t&auml;tig:</p>
+          <p style="font-size:1rem; color:#1A2C4E; line-height:1.6; text-align:justify; hyphens:auto; -webkit-hyphens:auto; hyphenate-limit-chars:6 3 3; margin-bottom:16px;">In folgenden <span style="font-weight:700;">ausgew&auml;hlten</span> Teilbereichen des <strong style="color:#1A2C4E;">Sozialrechts</strong> bin ich gerne f&uuml;r Sie t&auml;tig:</p>
 
-          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:0 0 10px 0;">SGB IV &ndash; Gemeinsame Vorschriften</h3>
+          <h3 style="font-size:1.1rem; font-weight:700; color:#1A2C4E; margin:0 0 10px 0;">SGB IV &ndash; Gemeinsame Vorschriften</h3>
           <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">
             <li>Scheinselbst&auml;ndigkeit</li>
             <li>Statusfeststellungsverfahren / Anfrageverfahren (Einzugsstelle, Rentenversicherung / Familienangeh&ouml;rige, GmbH-Gesch&auml;ftsf&uuml;hrer)</li>
@@ -349,7 +349,7 @@ document.addEventListener('DOMContentLoaded',function(){
             <li>Sozialversicherungspflicht bei Gesellschaften</li>
           </ul>
 
-          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB III &ndash; Arbeitsf&ouml;rderung</h3>
+          <h3 style="font-size:1.1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB III &ndash; Arbeitsf&ouml;rderung</h3>
           <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0;">
             <li>Versicherungspflicht</li>
             <li>Berufsausbildungsbeihilfe</li>
@@ -362,7 +362,7 @@ document.addEventListener('DOMContentLoaded',function(){
             <li>Meldepflichten</li>
           </ul>
 
-          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB V &ndash; Gesetzliche Krankenversicherung</h3>
+          <h3 style="font-size:1.1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB V &ndash; Gesetzliche Krankenversicherung</h3>
           <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">
             <li>Versicherungspflicht, Versicherungsfreiheit, Befreiung von der Versicherungspflicht</li>
             <li>Wechsel / R&uuml;ckkehr von privater Krankenversicherung zu gesetzlicher Krankenversicherung</li>
@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded',function(){
             <li>Fahrkosten</li>
           </ul>
 
-          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB VI &ndash; Gesetzliche Rentenversicherung</h3>
+          <h3 style="font-size:1.1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB VI &ndash; Gesetzliche Rentenversicherung</h3>
           <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">
             <li>Versicherungspflicht (Besch&auml;ftigte, selbst&auml;ndig T&auml;tige, sonstige Versicherte, auf Antrag)</li>
             <li>Versicherungsfreiheit / Befreiung von der Versicherungspflicht / freiwillige Versicherung</li>
@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded',function(){
             <li>Hinzuverdienst</li>
           </ul>
 
-          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB VII &ndash; Gesetzliche Unfallversicherung</h3>
+          <h3 style="font-size:1.1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB VII &ndash; Gesetzliche Unfallversicherung</h3>
           <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">
             <li>Versicherung kraft Gesetzes / Satzung / Versicherungsfreiheit / freiwillige Versicherung</li>
             <li>Arbeitsunfall / Berufskrankheit</li>
@@ -394,14 +394,14 @@ document.addEventListener('DOMContentLoaded',function(){
             <li>Gefahrtarif / Gefahrklassen / Beitragsbescheid</li>
           </ul>
 
-          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB IX &ndash; Rehabilitation und Teilhabe von Menschen mit Behinderungen</h3>
+          <h3 style="font-size:1.1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGB IX &ndash; Rehabilitation und Teilhabe von Menschen mit Behinderungen</h3>
           <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0;">
             <li>Schwerbehinderung / Gleichstellung</li>
             <li>Leistungen zur medizinischen Rehabilitation</li>
             <li>Leistungen zur Teilhabe am Arbeitsleben</li>
           </ul>
 
-          <h3 style="font-size:1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGG &ndash; Sozialgerichtsgesetz</h3>
+          <h3 style="font-size:1.1rem; font-weight:700; color:#1A2C4E; margin:24px 0 10px 0; padding-top:24px; border-top:1px solid rgba(26,44,78,0.2);">SGG &ndash; Sozialgerichtsgesetz</h3>
           <ul style="font-size:0.95rem; line-height:1.9; color:#1A2C4E; padding-left:1.1em; margin:0; text-align:justify; hyphens:auto; -webkit-hyphens:auto;">
             <li>Sozialgerichtsverfahren: Sozialgerichte / Landessozialgerichte / Bundessozialgericht</li>
             <li>Anfechtungsklage / Leistungsklage / Verpflichtungsklage / Feststellungsklage / Unt&auml;tigkeitsklage / Fortsetzungsfeststellungsklage / Nichtigkeitsklage</li>

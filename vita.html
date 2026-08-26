@@ -30,8 +30,6 @@
 .vita-table td.label { font-weight: 700; white-space: nowrap; width: 1%; padding-right: 28px; }
 .vita-table td.year { color: #1A2C4E; width: 1%; white-space: nowrap; font-weight: 400; padding-right: 28px; }
 @media (max-width: 860px){
-  .ak-vita-wrap{flex-direction:column !important; align-items:center !important; gap:20px !important;}
-  .ak-vita-content{margin-top:0 !important; width:100% !important;}
   .vita-table{width:100% !important; font-size:0.85rem !important; table-layout:fixed !important;}
   .vita-table td.label{white-space:normal !important; width:auto !important;}
   .vita-table td.year{white-space:normal !important; width:auto !important;}
@@ -293,7 +291,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <a href="index.html" aria-label="Startseite" style="display:flex; align-items:center; padding:16px 0; color:#1A2C4E;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 4px;"></span></a>
       <div style="display:flex; align-items:center; gap:14px; flex:0 0 auto;">
         <a href="kontakt.html" class="hov13" style="display:block; font-weight:700; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; padding:7px 12px; white-space:nowrap;">Kontakt</a>
-        <button type="button" onclick="akToggle('ak-mobile-panel')" id="ak-burger" aria-expanded="false" aria-controls="ak-mobile-panel" aria-label="Men&uuml; &ouml;ffnen" style="background:none; border:none; padding:16px 0 16px 4px; cursor:pointer; display:flex; align-items:center;">
+        <button type="button" onclick="akToggle('ak-mobile-panel')" id="ak-burger" aria-expanded="false" aria-controls="ak-mobile-panel" aria-label="Men&uuml; &ouml;ffnen" style="font-family:inherit; background:none; border:none; padding:16px 0 16px 4px; cursor:pointer; display:flex; align-items:center;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:26px; color:#1A2C4E;" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
         </button>
       </div>
@@ -303,7 +301,7 @@ document.addEventListener('DOMContentLoaded',function(){
         <li style="border-top:1px solid #EDE0C4;"><a href="index.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid #A71F38;">Startseite</a></li>
         <li style="border-top:1px solid #EDE0C4;"><a href="kanzlei.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Kanzlei</a></li>
         <li style="border-top:1px solid #EDE0C4;">
-          <button type="button" onclick="akToggle('ak-sub-l')" aria-expanded="true" aria-controls="ak-sub-l" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
+          <button type="button" onclick="akToggle('ak-sub-l')" aria-expanded="true" aria-controls="ak-sub-l" style="font-family:inherit; display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
             <span>Leistungen</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:16px;" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
           </button>
           <div id="ak-sub-l" class="ak-sub-panel">
@@ -315,7 +313,7 @@ document.addEventListener('DOMContentLoaded',function(){
         </li>
         <li style="border-top:1px solid #EDE0C4;"><a href="vita.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#A71F38; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Vita</a></li>
         <li style="border-top:1px solid #EDE0C4;">
-          <button type="button" onclick="akToggle('ak-sub-f')" aria-expanded="false" aria-controls="ak-sub-f" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
+          <button type="button" onclick="akToggle('ak-sub-f')" aria-expanded="false" aria-controls="ak-sub-f" style="font-family:inherit; display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
             <span>Fachanwalt</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:16px;" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
           </button>
           <div id="ak-sub-f" class="ak-sub-panel">
@@ -341,23 +339,6 @@ document.addEventListener('DOMContentLoaded',function(){
           <span style="font-weight:700; color:#A71F38;">Rechtsanw&auml;ltin <span style="color:#1A2C4E;">&ndash;</span> Fachanw&auml;ltin f&uuml;r: Arbeitsrecht &middot; Sozialrecht</span>
         </h2>
 
-        <div class="ak-vita-wrap" style="display:flex; align-items:flex-start; gap:40px;">
-          <div style="flex-shrink:0; width:160px; height:180px; background:#ffffff; border:1px solid #1A2C4E; display:flex; align-items:center; justify-content:center; padding-left:16px; margin-top:12px;">
-            <div style="display:inline-flex; align-items:center;">
-              <div style="position:relative; width:31px; height:36px; flex-shrink:0;">
-                <span style="position:absolute; left:0; top:0; font-weight:700; font-size:36px; line-height:1; color:#1A2C4E;">A</span>
-                <span style="position:absolute; left:12px; top:0; font-weight:700; font-size:36px; line-height:1; color:#1A2C4E; clip-path:polygon(45% 0, 100% 0, 100% 100%, 45% 100%);">K</span>
-              </div>
-              <div style="width:30px; height:36px; display:flex; align-items:center; justify-content:center; padding-left:2px; flex-shrink:0;">
-                <span style="font-weight:900; font-size:19px; color:#A71F38; position:relative; top:-3px;">&sect;</span>
-              </div>
-              <div style="position:relative; width:55px; height:36px; flex-shrink:0; margin-left:-3px;">
-                <span style="position:absolute; left:0; top:0; font-weight:700; font-size:36px; line-height:1; color:#1A2C4E;">A</span>
-                <span style="position:absolute; left:12px; top:0; font-weight:700; font-size:36px; line-height:1; color:#1A2C4E; clip-path:polygon(45% 0, 100% 0, 100% 100%, 45% 100%);">K</span>
-              </div>
-            </div>
-          </div>
-          <div class="ak-vita-content" style="flex:1; margin-top:-28px;">
         <table class="vita-table">
           <tr>
             <td class="label">Jahrgang</td>
@@ -369,8 +350,8 @@ document.addEventListener('DOMContentLoaded',function(){
           </tr>
           <tr>
             <td class="label">Zulassung</td>
-            <td class="year">1997</td>
-            <td>Rechtsanwaltszulassung</td>
+            <td class="year"><span style="color:#A71F38;">seit 1997</span></td>
+            <td>Rechtsanw&auml;ltin</td>
           </tr>
           <tr style="border-bottom:none;">
             <td class="label">Berufspraxis</td>
@@ -389,12 +370,12 @@ document.addEventListener('DOMContentLoaded',function(){
           </tr>
           <tr style="border-bottom:none;">
             <td class="label">Fachanwaltstitel</td>
-            <td class="year"><strong style="color:#A71F38;">seit 2006</strong></td>
+            <td class="year"><span style="color:#A71F38;">seit 2006</span></td>
             <td><strong>Fachanw&auml;ltin f&uuml;r Arbeitsrecht</strong></td>
           </tr>
           <tr>
             <td class="label"></td>
-            <td class="year"><strong style="color:#A71F38;">seit 2010</strong></td>
+            <td class="year"><span style="color:#A71F38;">seit 2010</span></td>
             <td><strong>Fachanw&auml;ltin f&uuml;r Sozialrecht</strong></td>
           </tr>
           <tr style="border-bottom:none;">
@@ -427,8 +408,6 @@ document.addEventListener('DOMContentLoaded',function(){
             <td>Rechtswissenschaften, Universit&auml;t Heidelberg</td>
           </tr>
 </table>
-          </div>
-        </div>
       </div>
     </section>
   </main>

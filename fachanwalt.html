@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <a href="index.html" aria-label="Startseite" style="display:flex; align-items:center; padding:16px 0; color:#1A2C4E;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 4px;"></span></a>
       <div style="display:flex; align-items:center; gap:14px; flex:0 0 auto;">
         <a href="kontakt.html" class="hov13" style="display:block; font-weight:700; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; padding:7px 12px; white-space:nowrap;">Kontakt</a>
-        <button type="button" onclick="akToggle('ak-mobile-panel')" id="ak-burger" aria-expanded="false" aria-controls="ak-mobile-panel" aria-label="Men&uuml; &ouml;ffnen" style="background:none; border:none; padding:16px 0 16px 4px; cursor:pointer; display:flex; align-items:center;">
+        <button type="button" onclick="akToggle('ak-mobile-panel')" id="ak-burger" aria-expanded="false" aria-controls="ak-mobile-panel" aria-label="Men&uuml; &ouml;ffnen" style="font-family:inherit; background:none; border:none; padding:16px 0 16px 4px; cursor:pointer; display:flex; align-items:center;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:26px; color:#1A2C4E;" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
         </button>
       </div>
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded',function(){
         <li style="border-top:1px solid #EDE0C4;"><a href="index.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid #A71F38;">Startseite</a></li>
         <li style="border-top:1px solid #EDE0C4;"><a href="kanzlei.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Kanzlei</a></li>
         <li style="border-top:1px solid #EDE0C4;">
-          <button type="button" onclick="akToggle('ak-sub-l')" aria-expanded="true" aria-controls="ak-sub-l" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
+          <button type="button" onclick="akToggle('ak-sub-l')" aria-expanded="true" aria-controls="ak-sub-l" style="font-family:inherit; display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
             <span>Leistungen</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:16px;" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
           </button>
           <div id="ak-sub-l" class="ak-sub-panel">
@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded',function(){
         </li>
         <li style="border-top:1px solid #EDE0C4;"><a href="vita.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Vita</a></li>
         <li style="border-top:1px solid #EDE0C4;">
-          <button type="button" onclick="akToggle('ak-sub-f')" aria-expanded="false" aria-controls="ak-sub-f" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
+          <button type="button" onclick="akToggle('ak-sub-f')" aria-expanded="false" aria-controls="ak-sub-f" style="font-family:inherit; display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
             <span>Fachanwalt</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:16px;" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
           </button>
           <div id="ak-sub-f" class="ak-sub-panel">
@@ -335,9 +335,9 @@ document.addEventListener('DOMContentLoaded',function(){
             <div style="font-size:0.75rem; letter-spacing:0.16em; text-transform:uppercase; color:#A71F38; font-weight:700; margin-bottom:10px;">Fachanwaltstitel seit 2006</div>
             <h3 style="font-size:1.2rem; font-weight:700; color:#1A2C4E; margin-bottom:16px;">Fachanw&auml;ltin f&uuml;r Arbeitsrecht</h3>
             <p style="font-size:1rem; color:#1A2C4E; line-height:1.6; margin-bottom:14px; text-align:justify; hyphens:auto; -webkit-hyphens:auto; hyphenate-limit-chars:6 3 3;">Ein Fachanwalt f&uuml;r Arbeitsrecht muss entsprechend der Fachanwaltsordnung besondere theoretische Kenntnisse und besondere praktische Erfahrungen in folgenden Bereichen nachgewiesen haben:</p>
-            <ul style="font-size:0.95rem; line-height:1.7; padding-left:1.1em; margin:0 0 16px; color:#1A2C4E;">
+            <ul style="font-size:0.95rem; line-height:1.75; padding-left:1.1em; margin:0 0 16px; color:#1A2C4E;">
               <li style="margin-bottom:2px;"><strong>Individualarbeitsrecht</strong>
-                <ul style="padding-left:1.2em; font-size:0.95rem; color:#1A2C4E; margin-top:6px; margin-bottom:10px; list-style-type:circle;">
+                <ul style="line-height:1.9; padding-left:1.2em; font-size:0.95rem; color:#1A2C4E; margin-top:6px; margin-bottom:10px; list-style-type:circle;">
                   <li>Abschluss, Inhalt und &Auml;nderung des Arbeits- und Berufsausbildungsvertrages</li>
                   <li>Beendigung des Arbeits- und Berufsausbildungsverh&auml;ltnisses einschlie&szlig;lich K&uuml;ndigungsschutz</li>
                   <li>Schutz besonderer Personengruppen (Schwangere, Eltern, Schwerbehinderte, Jugendliche)</li>
@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded',function(){
                 </ul>
               </li>
               <li style="margin-bottom:2px;"><strong>Kollektives Arbeitsrecht</strong>
-                <ul style="padding-left:1.2em; font-size:0.95rem; color:#1A2C4E; margin-top:6px; margin-bottom:10px; list-style-type:circle;">
+                <ul style="line-height:1.9; padding-left:1.2em; font-size:0.95rem; color:#1A2C4E; margin-top:6px; margin-bottom:10px; list-style-type:circle;">
                   <li>Tarifvertragsrecht</li>
                   <li>Personalvertretungs- und Betriebsverfassungsrecht</li>
                   <li>Grundz&uuml;ge des Arbeitskampfrechts</li>
@@ -361,7 +361,7 @@ document.addEventListener('DOMContentLoaded',function(){
             <div style="font-size:0.75rem; letter-spacing:0.16em; text-transform:uppercase; color:#A71F38; font-weight:700; margin-bottom:10px;">Fachanwaltstitel seit 2010</div>
             <h3 style="font-size:1.2rem; font-weight:700; color:#1A2C4E; margin-bottom:16px;">Fachanw&auml;ltin f&uuml;r Sozialrecht</h3>
             <p style="font-size:1rem; color:#1A2C4E; line-height:1.6; margin-bottom:14px; text-align:justify; hyphens:auto; -webkit-hyphens:auto; hyphenate-limit-chars:6 3 3;">F&uuml;r den Fachanwalt f&uuml;r Sozialrecht schreibt die Fachanwaltsordnung vor, dass dieser u.&nbsp;a. in folgenden Bereichen besondere praktische Erfahrungen und theoretische Kenntnisse nachgewiesen haben muss:</p>
-            <ul style="font-size:0.95rem; line-height:1.7; padding-left:1.1em; margin:0; color:#1A2C4E; display:flex; flex-direction:column; gap:10px;">
+            <ul style="font-size:0.95rem; line-height:1.75; padding-left:1.1em; margin:0; color:#1A2C4E; display:flex; flex-direction:column; gap:10px;">
               <li><strong>Allgemeines Sozialrecht</strong> (SGB&nbsp;I)</li>
               <li><strong>Verfahrensrecht</strong> (SGB&nbsp;X und SGG)</li>
               <li><strong>Gesetzliche Arbeitslosenversicherung</strong> (SGB&nbsp;III)</li>

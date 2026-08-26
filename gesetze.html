@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <a href="index.html" aria-label="Startseite" style="display:flex; align-items:center; padding:16px 0; color:#1A2C4E;"><span aria-hidden="true" style="display:block; width:9px; height:9px; background:currentColor; transform:rotate(45deg); margin:0 4px;"></span></a>
       <div style="display:flex; align-items:center; gap:14px; flex:0 0 auto;">
         <a href="kontakt.html" class="hov13" style="display:block; font-weight:700; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; padding:7px 12px; white-space:nowrap;">Kontakt</a>
-        <button type="button" onclick="akToggle('ak-mobile-panel')" id="ak-burger" aria-expanded="false" aria-controls="ak-mobile-panel" aria-label="Men&uuml; &ouml;ffnen" style="background:none; border:none; padding:16px 0 16px 4px; cursor:pointer; display:flex; align-items:center;">
+        <button type="button" onclick="akToggle('ak-mobile-panel')" id="ak-burger" aria-expanded="false" aria-controls="ak-mobile-panel" aria-label="Men&uuml; &ouml;ffnen" style="font-family:inherit; background:none; border:none; padding:16px 0 16px 4px; cursor:pointer; display:flex; align-items:center;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:26px; color:#1A2C4E;" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
         </button>
       </div>
@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded',function(){
         <li style="border-top:1px solid #EDE0C4;"><a href="index.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid #A71F38;">Startseite</a></li>
         <li style="border-top:1px solid #EDE0C4;"><a href="kanzlei.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Kanzlei</a></li>
         <li style="border-top:1px solid #EDE0C4;">
-          <button type="button" onclick="akToggle('ak-sub-l')" aria-expanded="true" aria-controls="ak-sub-l" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
+          <button type="button" onclick="akToggle('ak-sub-l')" aria-expanded="true" aria-controls="ak-sub-l" style="font-family:inherit; display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
             <span>Leistungen</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:16px;" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
           </button>
           <div id="ak-sub-l" class="ak-sub-panel">
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded',function(){
         </li>
         <li style="border-top:1px solid #EDE0C4;"><a href="vita.html" onclick="akClose()" style="display:block; padding:16px 20px; color:#1A2C4E; font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; border-left:3px solid transparent;">Vita</a></li>
         <li style="border-top:1px solid #EDE0C4;">
-          <button type="button" onclick="akToggle('ak-sub-f')" aria-expanded="false" aria-controls="ak-sub-f" style="display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
+          <button type="button" onclick="akToggle('ak-sub-f')" aria-expanded="false" aria-controls="ak-sub-f" style="font-family:inherit; display:flex; align-items:center; justify-content:space-between; width:100%; padding:16px 20px; color:#1A2C4E; font-weight:700; background:none; border:none; border-left:3px solid transparent; text-align:left; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer;">
             <span>Fachanwalt</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em; height:1em; display:inline-block; flex:none; font-size:16px;" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg>
           </button>
           <div id="ak-sub-f" class="ak-sub-panel">
@@ -333,55 +333,55 @@ document.addEventListener('DOMContentLoaded',function(){
         <div class="ak-grid2" style="display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start;">
 
           <div class="gesetze-col" style="padding:32px; border:1px solid rgba(26,44,78,0.2); border-top:4px solid #1A2C4E; border-radius:4px; box-shadow:0 1px 6px rgba(0,0,0,0.05);">
-            <h3 style="font-size:1.1rem; font-weight:700; color:#A71F38; margin-bottom:12px;">Arbeitsrecht</h3>
+            <h3 style="font-size:1.2rem; margin-bottom:12px; color:#1A2C4E;">Arbeitsrecht</h3>
             <ul>
-              <li><strong>Allgemeines Gleichbehandlungsgesetz (AGG)</strong></li>
-              <li><strong>Altersteilzeitgesetz (AltTZG)</strong></li>
-              <li><strong>Arbeitnehmer-Entsendegesetz (AEntG)</strong></li>
-              <li><strong>Arbeitsgerichtsgesetz (ArbGG)</strong></li>
-              <li><strong>Arbeitsschutzgesetz (ArbSchG)</strong></li>
-              <li><strong>Arbeitszeitgesetz (ArbZG)</strong></li>
-              <li><strong>Betriebsverfassungsgesetz (BetrVG)</strong></li>
-              <li><strong>B&uuml;rgerliches Gesetzbuch (BGB)</strong></li>
-              <li><strong>Bundesdatenschutzgesetz (BDSG)</strong></li>
-              <li><strong>Bundeselterngeld- und Elternzeitgesetz (BEEG)</strong></li>
-              <li><strong>Bundesurlaubsgesetz (BUrlG)</strong></li>
-              <li><strong>Einkommensteuergesetz (EStG)</strong></li>
-              <li><strong>Entgeltfortzahlungsgesetz (EFZG)</strong></li>
-              <li><strong>Entgelttransparenzgesetz (EntgTranspG)</strong></li>
-              <li><strong>Familienpflegezeitgesetz (FPfZG)</strong></li>
-              <li><strong>Gewerbeordnung (GewO)</strong></li>
-              <li><strong>Grundgesetz (GG)</strong></li>
-              <li><strong>Handelsgesetzbuch (HGB)</strong></li>
-                            <li><strong>Insolvenzordnung (InsO)</strong></li>
-              <li><strong>Jugendarbeitsschutzgesetz (JArbSchG)</strong></li>
-              <li><strong>K&uuml;ndigungsschutzgesetz (KSchG)</strong></li>
-                            <li><strong>Mindestlohngesetz (MiLoG)</strong></li>
-              <li><strong>Mitbestimmungsgesetz (MitbestG)</strong></li>
-              <li><strong>Mutterschutzgesetz (MuSchG)</strong></li>
-              <li><strong>Nachweisgesetz (NachwG)</strong></li>
-              <li><strong>Pflegezeitgesetz (PflegeZG)</strong></li>
-              <li><strong>Schwarzarbeitsbek&auml;mpfungsgesetz (SchwarzArbG)</strong></li>
-              <li><strong>Sprecherausschussgesetz (SprAuG)</strong></li>
-              <li><strong>Tarifvertragsgesetz (TVG)</strong></li>
-              <li><strong>Teilzeit- und Befristungsgesetz (TzBfG)</strong></li>
-              <li><strong>Umwandlungsgesetz (UmwG)</strong></li>
-              <li><strong>Zivilprozessordnung (ZPO)</strong></li>
+              <li><strong>Allgemeines Gleichbehandlungsgesetz</strong> (AGG)</li>
+              <li><strong>Altersteilzeitgesetz</strong> (AltTZG)</li>
+              <li><strong>Arbeitnehmer-Entsendegesetz</strong> (AEntG)</li>
+              <li><strong>Arbeitsgerichtsgesetz</strong> (ArbGG)</li>
+              <li><strong>Arbeitsschutzgesetz</strong> (ArbSchG)</li>
+              <li><strong>Arbeitszeitgesetz</strong> (ArbZG)</li>
+              <li><strong>Betriebsverfassungsgesetz</strong> (BetrVG)</li>
+              <li><strong>B&uuml;rgerliches Gesetzbuch</strong> (BGB)</li>
+              <li><strong>Bundesdatenschutzgesetz</strong> (BDSG)</li>
+              <li><strong>Bundeselterngeld- und Elternzeitgesetz</strong> (BEEG)</li>
+              <li><strong>Bundesurlaubsgesetz</strong> (BUrlG)</li>
+              <li><strong>Einkommensteuergesetz</strong> (EStG)</li>
+              <li><strong>Entgeltfortzahlungsgesetz</strong> (EFZG)</li>
+              <li><strong>Entgelttransparenzgesetz</strong> (EntgTranspG)</li>
+              <li><strong>Familienpflegezeitgesetz</strong> (FPfZG)</li>
+              <li><strong>Gewerbeordnung</strong> (GewO)</li>
+              <li><strong>Grundgesetz</strong> (GG)</li>
+              <li><strong>Handelsgesetzbuch</strong> (HGB)</li>
+                            <li><strong>Insolvenzordnung</strong> (InsO)</li>
+              <li><strong>Jugendarbeitsschutzgesetz</strong> (JArbSchG)</li>
+              <li><strong>K&uuml;ndigungsschutzgesetz</strong> (KSchG)</li>
+                            <li><strong>Mindestlohngesetz</strong> (MiLoG)</li>
+              <li><strong>Mitbestimmungsgesetz</strong> (MitbestG)</li>
+              <li><strong>Mutterschutzgesetz</strong> (MuSchG)</li>
+              <li><strong>Nachweisgesetz</strong> (NachwG)</li>
+              <li><strong>Pflegezeitgesetz</strong> (PflegeZG)</li>
+              <li><strong>Schwarzarbeitsbek&auml;mpfungsgesetz</strong> (SchwarzArbG)</li>
+              <li><strong>Sprecherausschussgesetz</strong> (SprAuG)</li>
+              <li><strong>Tarifvertragsgesetz</strong> (TVG)</li>
+              <li><strong>Teilzeit- und Befristungsgesetz</strong> (TzBfG)</li>
+              <li><strong>Umwandlungsgesetz</strong> (UmwG)</li>
+              <li><strong>Zivilprozessordnung</strong> (ZPO)</li>
             </ul>
           </div>
 
           <div class="gesetze-col" style="padding:32px; border:1px solid rgba(26,44,78,0.2); border-top:4px solid #1A2C4E; border-radius:4px; box-shadow:0 1px 6px rgba(0,0,0,0.05);">
-            <h3 style="font-size:1.1rem; font-weight:700; color:#A71F38; margin-bottom:12px;">Sozialrecht</h3>
+            <h3 style="font-size:1.2rem; margin-bottom:12px; color:#1A2C4E;">Sozialrecht</h3>
             <ul>
-              <li style="display:flex; gap:8px;"><strong style="flex-shrink:0; width:64px;">SGB I:</strong><strong>Allgemeiner Teil</strong></li>
-              <li style="display:flex; gap:8px;"><strong style="flex-shrink:0; width:64px;">SGB III:</strong><strong>Arbeitsf&ouml;rderung</strong></li>
-              <li style="display:flex; gap:8px;"><strong style="flex-shrink:0; width:64px;">SGB IV:</strong><strong>Gemeinsame Vorschriften</strong></li>
-              <li style="display:flex; gap:8px;"><strong style="flex-shrink:0; width:64px;">SGB V:</strong><strong>Gesetzliche Krankenversicherung</strong></li>
-              <li style="display:flex; gap:8px;"><strong style="flex-shrink:0; width:64px;">SGB VI:</strong><strong>Gesetzliche Rentenversicherung</strong></li>
-              <li style="display:flex; gap:8px;"><strong style="flex-shrink:0; width:64px;">SGB VII:</strong><strong>Gesetzliche Unfallversicherung</strong></li>
-              <li style="display:flex; gap:8px;"><strong style="flex-shrink:0; width:64px;">SGB IX:</strong><strong>Rehabilitation und Teilhabe von Menschen mit Behinderungen</strong></li>
-              <li style="display:flex; gap:8px;"><strong style="flex-shrink:0; width:64px;">SGB X:</strong><strong>Sozialverwaltungsverfahren und Sozialdatenschutz</strong></li>
-              <li style="display:flex; gap:8px;"><strong style="flex-shrink:0; width:64px;">SGG:</strong><strong>Sozialgerichtsgesetz</strong></li>
+              <li style="display:flex; gap:8px;"><span style="flex-shrink:0; width:64px;">SGB I:</span><strong>Allgemeiner Teil</strong></li>
+              <li style="display:flex; gap:8px;"><span style="flex-shrink:0; width:64px;">SGB III:</span><strong>Arbeitsf&ouml;rderung</strong></li>
+              <li style="display:flex; gap:8px;"><span style="flex-shrink:0; width:64px;">SGB IV:</span><strong>Gemeinsame Vorschriften</strong></li>
+              <li style="display:flex; gap:8px;"><span style="flex-shrink:0; width:64px;">SGB V:</span><strong>Gesetzliche Krankenversicherung</strong></li>
+              <li style="display:flex; gap:8px;"><span style="flex-shrink:0; width:64px;">SGB VI:</span><strong>Gesetzliche Rentenversicherung</strong></li>
+              <li style="display:flex; gap:8px;"><span style="flex-shrink:0; width:64px;">SGB VII:</span><strong>Gesetzliche Unfallversicherung</strong></li>
+              <li style="display:flex; gap:8px;"><span style="flex-shrink:0; width:64px;">SGB IX:</span><strong>Rehabilitation und Teilhabe von Menschen mit Behinderungen</strong></li>
+              <li style="display:flex; gap:8px;"><span style="flex-shrink:0; width:64px;">SGB X:</span><strong>Sozialverwaltungsverfahren und Sozialdatenschutz</strong></li>
+              <li style="display:flex; gap:8px;"><span style="flex-shrink:0; width:64px;">SGG:</span><strong>Sozialgerichtsgesetz</strong></li>
             </ul>
           </div>
 
